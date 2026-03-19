@@ -1,0 +1,117 @@
+.card {
+  background: var(--c-surface-raised);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+
+.card:hover {
+  border-color: var(--c-border-accent);
+}
+
+.cardGlow {
+  box-shadow: var(--shadow-glow-accent);
+  border-color: var(--c-accent-200);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-4);
+}
+
+.cardTitle {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--c-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cardValue {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--c-text-primary);
+  font-family: var(--ff-mono);
+  line-height: var(--lh-tight);
+}
+
+/* ── StatusDot ───────────────────────────────────── */
+
+.statusDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.statusDot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+.statusActive { background: var(--c-success); }
+.statusActive::after { background: var(--c-success); }
+
+.statusIdle { background: var(--c-warn-500); }
+.statusIdle::after { background: var(--c-warn-500); }
+
+.statusError { background: var(--c-error); }
+.statusError::after { background: var(--c-error); }
+
+.statusOffline { background: var(--c-base-300); }
+.statusOffline::after { animation: none; }
+
+/* ── Badge ───────────────────────────────────────── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  font-family: var(--ff-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badgeP0 { background: rgba(255, 82, 82, 0.15); color: var(--c-error); border: 1px solid rgba(255, 82, 82, 0.3); }
+.badgeP1 { background: rgba(255, 179, 0, 0.15); color: var(--c-warn-500); border: 1px solid rgba(255, 179, 0, 0.3); }
+.badgeP2 { background: rgba(0, 229, 255, 0.10); color: var(--c-accent-500); border: 1px solid rgba(0, 229, 255, 0.2); }
+.badgeP3 { background: rgba(136, 153, 170, 0.10); color: var(--c-text-secondary); border: 1px solid rgba(136, 153, 170, 0.2); }
+
+.badgeFeature { background: rgba(0, 230, 118, 0.12); color: var(--c-success); border: 1px solid rgba(0, 230, 118, 0.25); }
+.badgeBug { background: rgba(255, 82, 82, 0.12); color: var(--c-error); border: 1px solid rgba(255, 82, 82, 0.25); }
+.badgeImprovement { background: rgba(68, 138, 255, 0.12); color: var(--c-info); border: 1px solid rgba(68, 138, 255, 0.25); }
+.badgeResearch { background: rgba(156, 39, 176, 0.12); color: var(--c-purple); border: 1px solid rgba(156, 39, 176, 0.25); }
+.badgeBlocked { background: rgba(255, 179, 0, 0.12); color: var(--c-warn-500); border: 1px solid rgba(255, 179, 0, 0.25); }
+
+/* ── Empty State ─────────────────────────────────── */
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-16);
+  text-align: center;
+  color: var(--c-text-muted);
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: var(--sp-4);
+  opacity: 0.4;
+}
+
+.emptyText {
+  font-size: var(--fs-sm);
+}

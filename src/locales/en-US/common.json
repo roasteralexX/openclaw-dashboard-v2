@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "agents": "Agents",
+    "crons": "Cron Jobs",
+    "office": "3D Office",
+    "board": "Project Board",
+    "settings": "Settings",
+    "health": "GW Health",
+    "chat": "Chat"
+  },
+  "buttons": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close",
+    "retry": "Retry",
+    "connect": "Connect",
+    "disconnect": "Disconnect"
+  },
+  "status": {
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "success": "Done",
+    "empty": "Nothing here yet",
+    "connecting": "Connecting…",
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "suspended": "Connection suspended"
+  },
+  "labels": {
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "language": "Language",
+    "theme": "Theme",
+    "version": "Version",
+    "tokensToday": "tokens today"
+  },
+  "actions": {
+    "create": "Create",
+    "edit": "Edit",
+    "view": "View",
+    "export": "Export",
+    "import": "Import",
+    "refresh": "Refresh",
+    "clearAll": "Clear all",
+    "connectGateway": "Connect Gateway →"
+  },
+  "dates": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This week",
+    "justNow": "Just now",
+    "ago": "{{value}} ago",
+    "secondsAgo": "{{count}} second ago",
+    "secondsAgo_other": "{{count}} seconds ago",
+    "minutesAgo": "{{count}} minute ago",
+    "minutesAgo_other": "{{count}} minutes ago",
+    "hoursAgo": "{{count}} hour ago",
+    "hoursAgo_other": "{{count}} hours ago",
+    "daysAgo": "{{count}} day ago",
+    "daysAgo_other": "{{count}} days ago"
+  },
+  "time": {
+    "justNow": "just now",
+    "secsAgo": "{{count}}s ago",
+    "minsAgo": "{{count}}m ago",
+    "hoursAgo": "{{count}}h ago",
+    "daysAgo": "{{count}}d ago",
+    "groups": {
+      "justNow": "Just now",
+      "lastMinute": "Last minute",
+      "last5Minutes": "Last 5 minutes",
+      "lastHour": "Last hour",
+      "earlier": "Earlier"
+    }
+  },
+  "pagination": {
+    "page": "Page",
+    "of": "of",
+    "items": "{{count}} item",
+    "items_other": "{{count}} items",
+    "loadMore": "Load more",
+    "showingOf": "Showing {{shown}} of {{total}}"
+  },
+  "accessibility": {
+    "closeModal": "Close modal",
+    "openMenu": "Open menu",
+    "toggleTheme": "Toggle color theme",
+    "switchLanguage": "Switch language",
+    "dragHandle": "Drag to reorder",
+    "required": "Required field",
+    "switchToLightMode": "Switch to light mode",
+    "switchToDarkMode": "Switch to dark mode",
+    "lightMode": "Light mode",
+    "darkMode": "Dark mode",
+    "sendMessage": "Send message",
+    "closeFeed": "Close feed"
+  },
+  "priority": {
+    "P0": "Critical",
+    "P1": "High",
+    "P2": "Medium",
+    "P3": "Low"
+  },
+  "sidebar": {
+    "modules": "Modules",
+    "system": "System",
+    "connectionError": "Connection Error",
+    "events": "Events",
+    "eventsUnread": "Events ({{count}})",
+    "openEventFeed": "Open event feed",
+    "resumeConnection": "Resume",
+    "secureConnection": "Encrypted connection (wss://)",
+    "localConnection": "Local connection (ws://localhost)",
+    "insecureConnection": "Insecure — please use wss://"
+  },
+  "footer": {
+    "live": "LIVE",
+    "simulation": "SIMULATION",
+    "connectedMessage": "Connected to your OpenClaw Gateway — all data is live and real-time.",
+    "disconnectedMessage": "No gateway connection — all data shown is synthetic and does not reflect real activity.",
+    "connectGateway": "Connect gateway →",
+    "brand": "OpenClaw v2"
+  },
+  "eventFeed": {
+    "title": "Event Feed",
+    "clear": "Clear",
+    "empty": "No events yet",
+    "emptyHint": "Connect your gateway to see live events"
+  }
+}

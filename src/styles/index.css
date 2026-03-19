@@ -1,0 +1,273 @@
+/* ═══════════════════════════════════════════════════════════
+   OpenClaw Dashboard — Design Tokens
+   Aesthetic: Industrial Command Center
+   ═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap');
+
+/* ── Reset ─────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Theme-agnostic tokens (stay in :root) ─────────────── */
+
+:root {
+  /* ── Typography ────────────────────────────────────── */
+  --ff-display: 'Space Grotesk', system-ui, sans-serif;
+  --ff-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+
+  --fs-3xl: 2.25rem;
+  --fs-2xl: 1.75rem;
+  --fs-xl: 1.375rem;
+  --fs-lg: 1.125rem;
+  --fs-base: 0.9375rem;
+  --fs-sm: 0.8125rem;
+  --fs-xs: 0.6875rem;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  /* ── Spacing (4px base) ────────────────────────────── */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+
+  /* ── Radii ─────────────────────────────────────────── */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+  --r-full: 9999px;
+
+  /* ── Transitions ───────────────────────────────────── */
+  --t-fast: 120ms ease-out;
+  --t-base: 200ms ease-out;
+  --t-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  --t-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ────────────────────────────────────────── */
+  --sidebar-width: 260px;
+  --sidebar-collapsed: 72px;
+  --topbar-height: 56px;
+}
+
+/* ── Dark Theme ────────────────────────────────────────── */
+
+[data-theme="dark"] {
+  /* Dominant: Deep charcoals */
+  --c-base-900: #050810;
+  --c-base-800: #0A0E14;
+  --c-base-700: #0F1419;
+  --c-base-600: #151B23;
+  --c-base-500: #1C232D;
+  --c-base-400: #242C38;
+  --c-base-300: #2E3845;
+  --c-base-200: #3A4555;
+  --c-base-100: #4A5568;
+
+  /* Accent: Electric cyan */
+  --c-accent-500: #00E5FF;
+  --c-accent-400: #18FFFF;
+  --c-accent-300: #64FFDA;
+  --c-accent-200: rgba(0, 229, 255, 0.20);
+  --c-accent-100: rgba(0, 229, 255, 0.08);
+  --c-accent-glow: 0 0 20px rgba(0, 229, 255, 0.3);
+
+  /* Alert: Warm amber */
+  --c-warn-500: #FFB300;
+  --c-warn-400: #FFC107;
+  --c-warn-200: rgba(255, 179, 0, 0.20);
+  --c-warn-100: rgba(255, 179, 0, 0.08);
+
+  /* Status */
+  --c-success: #00E676;
+  --c-error: #FF5252;
+  --c-info: #448AFF;
+  --c-running: #FFD740;
+  --c-purple: #CE93D8;
+
+  /* Neutrals */
+  --c-text-primary: #E8ECF1;
+  --c-text-secondary: #8899AA;
+  --c-text-muted: #556677;
+  --c-text-inverse: #0A0E14;
+
+  /* Surfaces */
+  --c-surface-base: var(--c-base-800);
+  --c-surface-raised: var(--c-base-600);
+  --c-surface-overlay: rgba(15, 20, 25, 0.95);
+  --c-surface-glass: rgba(21, 27, 35, 0.70);
+  --c-border: rgba(255, 255, 255, 0.06);
+  --c-border-accent: rgba(0, 229, 255, 0.15);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.6);
+  --shadow-glow-accent: 0 0 25px rgba(0, 229, 255, 0.15);
+  --shadow-glow-success: 0 0 15px rgba(0, 230, 118, 0.3);
+  --shadow-glow-error: 0 0 15px rgba(255, 82, 82, 0.3);
+
+  /* Scanline overlay tint */
+  --c-scanline: rgba(0, 229, 255, 0.008);
+
+  /* Disconnected overlay backdrop */
+  --c-overlay-backdrop: rgba(5, 8, 16, 0.08);
+}
+
+/* ── Light Theme — "Blueprint / Clean Ops" ─────────────── */
+
+[data-theme="light"] {
+  /* Base: Blue-gray — not pure white */
+  --c-base-900: #F0F4F8;
+  --c-base-800: #E8EDF5;
+  --c-base-700: #DDE3EE;
+  --c-base-600: #D0D8E6;
+  --c-base-500: #BCC8D8;
+  --c-base-400: #A4B2C4;
+  --c-base-300: #8899AA;
+  --c-base-200: #6B7A8D;
+  --c-base-100: #4A5568;
+
+  /* Accent: Cyan shifted darker for light-bg legibility */
+  --c-accent-500: #007A99;
+  --c-accent-400: #0099BB;
+  --c-accent-300: #00B89A;
+  --c-accent-200: rgba(0, 122, 153, 0.14);
+  --c-accent-100: rgba(0, 122, 153, 0.06);
+  --c-accent-glow: 0 0 20px rgba(0, 122, 153, 0.18);
+
+  /* Alert: Amber adjusted */
+  --c-warn-500: #C77700;
+  --c-warn-400: #F59E0B;
+  --c-warn-200: rgba(199, 119, 0, 0.14);
+  --c-warn-100: rgba(199, 119, 0, 0.06);
+
+  /* Status */
+  --c-success: #00A854;
+  --c-error: #D93025;
+  --c-info: #1967D2;
+  --c-running: #C77700;
+  --c-purple: #9333EA;
+
+  /* Neutrals */
+  --c-text-primary: #0D1117;
+  --c-text-secondary: #3D4F63;
+  --c-text-muted: #6B7A8D;
+  --c-text-inverse: #F0F4F8;
+
+  /* Surfaces */
+  --c-surface-base: var(--c-base-800);
+  --c-surface-raised: #FFFFFF;
+  --c-surface-overlay: rgba(232, 237, 245, 0.97);
+  --c-surface-glass: rgba(255, 255, 255, 0.96);
+  --c-border: rgba(0, 0, 0, 0.08);
+  --c-border-accent: rgba(0, 122, 153, 0.20);
+
+  /* Shadows: softer */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.14);
+  --shadow-glow-accent: 0 0 25px rgba(0, 122, 153, 0.12);
+  --shadow-glow-success: 0 0 15px rgba(0, 168, 84, 0.25);
+  --shadow-glow-error: 0 0 15px rgba(217, 48, 37, 0.25);
+
+  /* Scanline overlay tint: nearly invisible on light */
+  --c-scanline: rgba(0, 122, 153, 0.004);
+
+  /* Disconnected overlay backdrop */
+  --c-overlay-backdrop: rgba(240, 244, 248, 0.08);
+}
+
+/* ── Base Styles ───────────────────────────────────────── */
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--ff-display);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  color: var(--c-text-primary);
+  background-color: var(--c-base-900);
+  overflow: hidden;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-base-300);
+  border-radius: var(--r-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-base-200);
+}
+
+/* ── Selection ─────────────────────────────────────────── */
+
+::selection {
+  background: var(--c-accent-200);
+  color: var(--c-text-primary);
+}
+
+/* ── Focus ─────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--c-accent-500);
+  outline-offset: 2px;
+}
+
+/* ── Global Utility ────────────────────────────────────── */
+
+.mono {
+  font-family: var(--ff-mono);
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

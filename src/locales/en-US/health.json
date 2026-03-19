@@ -1,0 +1,65 @@
+{
+  "title": "Gateway Health",
+  "subtitle": "Real-time diagnostics for your RPC layer",
+  "badge": {
+    "healthy": "HEALTHY",
+    "degraded": "DEGRADED",
+    "offline": "OFFLINE"
+  },
+  "poll": {
+    "live": "LIVE — polling every {{interval}}s"
+  },
+  "kpi": {
+    "totalCalls": "Total Calls",
+    "avgLatency": "Avg Latency",
+    "errorRate": "Error Rate",
+    "activeNodes": "Active Nodes",
+    "ms": "ms",
+    "pct": "%"
+  },
+  "latencyChart": {
+    "title": "Latency History",
+    "noData": "Collecting data…",
+    "ms": "ms",
+    "tooltip": "{{method}}: {{ms}}ms"
+  },
+  "nodes": {
+    "title": "Node Health",
+    "load": "Load",
+    "ping": "Ping",
+    "region": "Region",
+    "model": "Model",
+    "status": {
+      "active": "Active",
+      "degraded": "Degraded",
+      "offline": "Offline"
+    },
+    "empty": "No nodes reported by gateway"
+  },
+  "rpc": {
+    "title": "RPC Method Stats",
+    "method": "Method",
+    "calls": "Calls",
+    "avgMs": "Avg (ms)",
+    "p95Ms": "P95 (ms)",
+    "errors": "Errors",
+    "lastError": "Last error: {{msg}}"
+  },
+  "info": {
+    "version": "Version",
+    "uptime": "Uptime",
+    "started": "Started",
+    "models": "Models",
+    "nodes": "Nodes"
+  },
+  "empty": {
+    "headline": "Gateway Health Monitor",
+    "description": "Connect your OpenClaw Gateway to see real-time diagnostics."
+  },
+  "features": {
+    "0": "RPC latency per method with historical charts",
+    "1": "Error rates and failure tracking per endpoint",
+    "2": "Node health grid with degraded status highlighting",
+    "3": "Live polling with sub-5s refresh rate"
+  }
+}

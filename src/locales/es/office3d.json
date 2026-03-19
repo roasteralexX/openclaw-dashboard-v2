@@ -1,0 +1,60 @@
+{
+  "title": "Oficina 3D",
+  "subtitle": "Visualización en vivo del espacio de trabajo de los agentes",
+  "controls": {
+    "resetCamera": "Restablecer Cámara",
+    "resetView": "Restablecer Vista",
+    "toggleGrid": "Alternar Cuadrícula",
+    "toggleLabels": "Alternar Etiquetas",
+    "zoomIn": "Acercar",
+    "zoomOut": "Alejar"
+  },
+  "desk": {
+    "idle": "Inactivo",
+    "working": "Trabajando",
+    "offline": "Sin conexión",
+    "unassigned": "Sin Asignar",
+    "assignAgent": "Asignar Agente",
+    "removeAgent": "Quitar Agente",
+    "deskId": "Escritorio {{id}}"
+  },
+  "agent": {
+    "currentTask": "Tarea Actual",
+    "session": "Sesión",
+    "uptime": "Uptime",
+    "tokensToday": "Tokens Hoy",
+    "noTask": "Sin tarea activa"
+  },
+  "legend": {
+    "title": "Estado",
+    "working": "Trabajando",
+    "idle": "Inactivo",
+    "offline": "Sin conexión"
+  },
+  "loading": "Construyendo oficina…",
+  "webglError": "WebGL no está soportado en tu navegador",
+  "emptyState": {
+    "headline": "Ve a tus agentes en sus escritorios",
+    "description": "Una vista espacial de tu equipo de agentes en tiempo real — quién está activo, inactivo o sin conexión de un vistazo, con detalles al hacer clic.",
+    "feature0": "Ocupación de escritorios en tiempo real por estado del agente",
+    "feature1": "Haz clic en cualquier escritorio para inspeccionar las estadísticas del agente",
+    "feature2": "Modo de edición para reorganizar el diseño de la oficina",
+    "feature3": "Navegación 3D completa con controles de órbita"
+  },
+  "editMode": {
+    "banner": "Modo de Edición activo — arrastra escritorios para reposicionar · selecciona un escritorio para rotar o inspeccionar",
+    "on": "Modo de Edición ACTIVO",
+    "label": "Modo de Edición",
+    "resetLayout": "Restablecer Diseño",
+    "resetView": "Restablecer Vista",
+    "rotate": "Rotar 90°"
+  },
+  "panel": {
+    "status": "Estado",
+    "tokensTotal": "Tokens Total",
+    "lastAction": "Última Acción",
+    "position": "Posición",
+    "emptyDesk": "Escritorio Vacío",
+    "noAgent": "Sin agente asignado"
+  }
+}

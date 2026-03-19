@@ -1,0 +1,70 @@
+{
+  "title": "Overview",
+  "subtitle": "Gateway health and agent activity at a glance",
+  "kpi": {
+    "activeSessions": "Active Sessions",
+    "activeChannels": "Active Channels",
+    "tokensUsed": "Tokens Used",
+    "uptime": "Uptime",
+    "latency": "Latency",
+    "eventsPerMin": "Events / min"
+  },
+  "health": {
+    "title": "Gateway Health",
+    "status": {
+      "healthy": "Healthy",
+      "degraded": "Degraded",
+      "offline": "Offline"
+    },
+    "node": "Node",
+    "region": "Region",
+    "model": "Model",
+    "ping": "Ping",
+    "uptime": "Uptime",
+    "version": "Version"
+  },
+  "tokenChart": {
+    "title": "Token Usage",
+    "titleFull": "Token Usage — Last 30 Days",
+    "legend": {
+      "input": "Input",
+      "output": "Output",
+      "total": "Total"
+    },
+    "noData": "No token data available"
+  },
+  "recentEvents": {
+    "title": "Recent Events",
+    "empty": "No events yet",
+    "seeAll": "See all events"
+  },
+  "sessionTable": {
+    "title": "Sessions",
+    "columns": {
+      "agent": "Agent",
+      "status": "Status",
+      "model": "Model",
+      "tokens": "Tokens",
+      "started": "Started"
+    },
+    "empty": "No active sessions"
+  },
+  "statCards": {
+    "activeAgents": "Active Agents",
+    "tokensToday": "Tokens Today",
+    "cronSuccessRate": "Cron Success Rate",
+    "ticketsInProgress": "Tickets In Progress",
+    "acrossAllAgents": "across all agents",
+    "withErrors": "{{count}} with errors",
+    "executions": "{{count}} executions",
+    "total": "{{count}} total"
+  },
+  "emptyState": {
+    "headline": "Your command center, live",
+    "description": "Real-time visibility over every agent running in your infrastructure — KPIs, token burn rate, and system health in one view.",
+    "feature0": "Live agent status across all sessions",
+    "feature1": "Token usage chart — last 30 days",
+    "feature2": "Cron health score and failure tracking",
+    "feature3": "Gateway uptime and connected nodes"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Visão Geral",
+  "subtitle": "Saúde do gateway e atividade dos agentes em tempo real",
+  "kpi": {
+    "activeSessions": "Sessões Ativas",
+    "activeChannels": "Canais Ativos",
+    "tokensUsed": "Tokens Utilizados",
+    "uptime": "Uptime",
+    "latency": "Latência",
+    "eventsPerMin": "Eventos / min"
+  },
+  "health": {
+    "title": "Saúde do Gateway",
+    "status": {
+      "healthy": "Saudável",
+      "degraded": "Degradado",
+      "offline": "Offline"
+    },
+    "node": "Nó",
+    "region": "Região",
+    "model": "Modelo",
+    "ping": "Ping",
+    "uptime": "Uptime",
+    "version": "Versão"
+  },
+  "tokenChart": {
+    "title": "Uso de Tokens",
+    "titleFull": "Uso de Tokens — Últimos 30 Dias",
+    "legend": {
+      "input": "Entrada",
+      "output": "Saída",
+      "total": "Total"
+    },
+    "noData": "Nenhum dado de tokens disponível"
+  },
+  "recentEvents": {
+    "title": "Eventos Recentes",
+    "empty": "Nenhum evento ainda",
+    "seeAll": "Ver todos os eventos"
+  },
+  "sessionTable": {
+    "title": "Sessões",
+    "columns": {
+      "agent": "Agente",
+      "status": "Status",
+      "model": "Modelo",
+      "tokens": "Tokens",
+      "started": "Iniciado"
+    },
+    "empty": "Nenhuma sessão ativa"
+  },
+  "statCards": {
+    "activeAgents": "Agentes Ativos",
+    "tokensToday": "Tokens Hoje",
+    "cronSuccessRate": "Taxa de Sucesso Cron",
+    "ticketsInProgress": "Tickets Em Progresso",
+    "acrossAllAgents": "entre todos os agentes",
+    "withErrors": "{{count}} com erros",
+    "executions": "{{count}} execuções",
+    "total": "{{count}} total"
+  },
+  "emptyState": {
+    "headline": "Seu centro de comando, ao vivo",
+    "description": "Visibilidade em tempo real de todos os agentes rodando na sua infraestrutura — KPIs, taxa de consumo de tokens e saúde do sistema em uma única visão.",
+    "feature0": "Status de agentes ao vivo em todas as sessões",
+    "feature1": "Gráfico de uso de tokens — últimos 30 dias",
+    "feature2": "Pontuação de saúde cron e rastreamento de falhas",
+    "feature3": "Uptime do gateway e nós conectados"
+  }
+}

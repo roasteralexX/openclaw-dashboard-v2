@@ -1,0 +1,441 @@
+/* ═══════════════════════════════════════════════════
+   Gateway Health Dashboard — health.module.css
+   Industrial Command Center aesthetic
+   ═══════════════════════════════════════════════════ */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: var(--sp-5) var(--sp-6);
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* ── Status bar ─────────────────────────────────── */
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 2px var(--sp-2);
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.badgeHealthy {
+  background: rgba(0, 230, 118, 0.12);
+  color: #00E676;
+  border: 1px solid rgba(0, 230, 118, 0.3);
+}
+
+.badgeDegraded {
+  background: rgba(255, 179, 0, 0.12);
+  color: #FFB300;
+  border: 1px solid rgba(255, 179, 0, 0.35);
+}
+
+.badgeOffline {
+  background: rgba(255, 82, 82, 0.12);
+  color: #FF5252;
+  border: 1px solid rgba(255, 82, 82, 0.3);
+}
+
+.badgeMock {
+  background: rgba(0, 229, 255, 0.08);
+  color: var(--c-accent-500);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.badgeDotPulse {
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+.statusMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  color: var(--c-text-muted);
+  flex-wrap: wrap;
+}
+
+.statusMetaItem {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.statusMetaLabel {
+  color: var(--c-text-subtle, var(--c-text-muted));
+  opacity: 0.6;
+}
+
+.pollIndicator {
+  margin-left: auto;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--c-accent-500);
+  opacity: 0.7;
+}
+
+.pollIndicatorMock {
+  color: var(--c-text-muted);
+  opacity: 0.5;
+}
+
+/* ── KPI Row ────────────────────────────────────── */
+
+.kpiRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-3);
+}
+
+@media (max-width: 900px) {
+  .kpiRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.kpiCard {
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  position: relative;
+  overflow: hidden;
+}
+
+.kpiCard::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: var(--kpi-accent, var(--c-accent-500));
+  opacity: 0.5;
+}
+
+.kpiValue {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-2xl, 28px);
+  font-weight: 700;
+  color: var(--c-text-primary);
+  line-height: 1;
+}
+
+.kpiValueUnit {
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  color: var(--c-text-muted);
+  margin-left: 2px;
+}
+
+.kpiLabel {
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  font-family: var(--ff-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.kpiDegraded {
+  --kpi-accent: #FFB300;
+}
+
+.kpiDegraded .kpiValue {
+  color: #FFB300;
+}
+
+/* ── Main grid: chart + nodes ───────────────────── */
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: var(--sp-4);
+  min-height: 0;
+}
+
+@media (max-width: 1100px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Cards ──────────────────────────────────────── */
+
+.card {
+  background: var(--c-surface-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.cardTitle {
+  font-size: var(--fs-xs);
+  font-family: var(--ff-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-text-muted);
+}
+
+.cardBody {
+  flex: 1;
+  padding: var(--sp-3) var(--sp-4);
+  min-height: 0;
+}
+
+/* ── Latency chart ──────────────────────────────── */
+
+.chartWrap {
+  height: 220px;
+}
+
+.chartEmpty {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-text-muted);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-sm);
+  opacity: 0.5;
+}
+
+.chartLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-4);
+  padding: 0 var(--sp-4) var(--sp-3);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--c-text-muted);
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Node grid ──────────────────────────────────── */
+
+.nodeList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.nodeCard {
+  background: var(--c-surface-1, var(--c-bg));
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  padding: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  transition: border-color 0.15s;
+}
+
+.nodeCardDegraded {
+  border-color: rgba(255, 179, 0, 0.35);
+  background: rgba(255, 179, 0, 0.03);
+}
+
+.nodeCardOffline {
+  border-color: rgba(255, 82, 82, 0.3);
+  background: rgba(255, 82, 82, 0.03);
+  opacity: 0.6;
+}
+
+.nodeHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.nodeStatusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.nodeStatusActive   { background: #00E676; }
+.nodeStatusDegraded { background: #FFB300; animation: pulse 1.6s ease-in-out infinite; }
+.nodeStatusOffline  { background: #FF5252; }
+
+.nodeId {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--c-text-primary);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nodePing {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--c-text-muted);
+  flex-shrink: 0;
+}
+
+.nodeMeta {
+  font-size: 11px;
+  font-family: var(--ff-mono);
+  color: var(--c-text-muted);
+  opacity: 0.7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nodeLoadWrap {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.nodeLoadBar {
+  flex: 1;
+  height: 4px;
+  background: var(--c-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.nodeLoadFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.nodeLoadNormal   { background: #00E676; }
+.nodeLoadWarn     { background: #FFB300; }
+.nodeLoadCritical { background: #FF5252; }
+
+.nodeLoadPct {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--c-text-muted);
+  width: 32px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.nodeEmpty {
+  padding: var(--sp-4);
+  text-align: center;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-sm);
+  color: var(--c-text-muted);
+  opacity: 0.5;
+}
+
+/* ── RPC method table ───────────────────────────── */
+
+.methodTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+}
+
+.methodTable th {
+  text-align: left;
+  padding: var(--sp-2) var(--sp-3);
+  color: var(--c-text-muted);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--c-border);
+  white-space: nowrap;
+}
+
+.methodTable td {
+  padding: var(--sp-2) var(--sp-3);
+  color: var(--c-text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  vertical-align: top;
+}
+
+.methodTable tr:last-child td {
+  border-bottom: none;
+}
+
+.methodName {
+  color: var(--c-accent-500);
+  font-weight: 500;
+}
+
+.methodErrorRow td {
+  background: rgba(255, 82, 82, 0.04);
+}
+
+.methodErrors {
+  color: #FF5252;
+  font-weight: 600;
+}
+
+.methodErrorMsg {
+  font-size: 10px;
+  color: #FF5252;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+/* ── Animations ─────────────────────────────────── */
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}

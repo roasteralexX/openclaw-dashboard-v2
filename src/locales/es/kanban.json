@@ -1,0 +1,78 @@
+{
+  "title": "Tablero de Proyectos",
+  "toolbar": {
+    "searchPlaceholder": "Buscar tickets…",
+    "newTicket": "Nuevo Ticket",
+    "clearFilters": "Limpiar filtros",
+    "filterByPriority": "Prioridad",
+    "filterByLabel": "Etiqueta",
+    "stats": {
+      "total": "{{count}} ticket",
+      "total_other": "{{count}} tickets",
+      "filtered": "{{shown}} de {{total}}",
+      "donePct": "% completado"
+    }
+  },
+  "columns": {
+    "backlog": "Backlog",
+    "todo": "Por Hacer",
+    "in_progress": "En Progreso",
+    "review": "En Revisión",
+    "done": "Terminado"
+  },
+  "ticket": {
+    "untitled": "Ticket sin título",
+    "addTicket": "Agregar ticket",
+    "label": "ticket",
+    "id": "ID",
+    "title": "Título",
+    "description": "Descripción",
+    "descriptionPlaceholder": "Agrega una descripción…",
+    "status": "Estado",
+    "priority": "Prioridad",
+    "assignee": "Responsable",
+    "agent": "Agente",
+    "labels": "Etiquetas",
+    "dueDate": "Fecha límite",
+    "estimatedHours": "Horas Est.",
+    "created": "Creado",
+    "updated": "Actualizado",
+    "comments": "Comentarios",
+    "noComments": "Sin comentarios aún",
+    "deleteConfirm": "¿Eliminar este ticket?",
+    "deleteWarning": "Esta acción no se puede deshacer."
+  },
+  "labels": {
+    "feature": "Funcionalidad",
+    "bug": "Bug",
+    "improvement": "Mejora",
+    "research": "Investigación",
+    "blocked": "Bloqueado"
+  },
+  "priority": {
+    "P0": "Crítico",
+    "P1": "Alto",
+    "P2": "Medio",
+    "P3": "Bajo"
+  },
+  "empty": {
+    "column": "Sin tickets aquí",
+    "board": "Tablero vacío — crea tu primer ticket",
+    "filtered": "Ningún ticket coincide con los filtros"
+  },
+  "keyboard": {
+    "hint": "Presiona N para crear un ticket · Esc para cerrar"
+  },
+  "board": {
+    "overdue": "Vencido",
+    "dragToMove": "Arrastar para mover",
+    "dropHere": "Suelta aquí",
+    "addTo": "Agregar a {{column}}",
+    "headline": "Rastrea cada iniciativa del equipo",
+    "description": "Un tablero Kanban que conecta la actividad de los agentes con los resultados — del backlog a terminado, con visibilidad completa por ticket.",
+    "feature0": "Arrastrar y soltar entre 5 etapas del flujo",
+    "feature1": "Triaje de prioridad de P0 (crítico) a P3",
+    "feature2": "Taxonomía de etiquetas: funcionalidad, bug, mejora, investigación, bloqueado",
+    "feature3": "Seguimiento de responsables en todo el equipo de agentes"
+  }
+}

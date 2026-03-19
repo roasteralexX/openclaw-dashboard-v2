@@ -1,0 +1,78 @@
+{
+  "title": "Project Board",
+  "toolbar": {
+    "searchPlaceholder": "Search tickets…",
+    "newTicket": "New Ticket",
+    "clearFilters": "Clear filters",
+    "filterByPriority": "Priority",
+    "filterByLabel": "Label",
+    "stats": {
+      "total": "{{count}} ticket",
+      "total_other": "{{count}} tickets",
+      "filtered": "{{shown}} of {{total}}",
+      "donePct": "% done"
+    }
+  },
+  "columns": {
+    "backlog": "Backlog",
+    "todo": "To Do",
+    "in_progress": "In Progress",
+    "review": "In Review",
+    "done": "Done"
+  },
+  "ticket": {
+    "untitled": "Untitled Ticket",
+    "addTicket": "Add ticket",
+    "label": "ticket",
+    "id": "ID",
+    "title": "Title",
+    "description": "Description",
+    "descriptionPlaceholder": "Add a description…",
+    "status": "Status",
+    "priority": "Priority",
+    "assignee": "Assignee",
+    "agent": "Agent",
+    "labels": "Labels",
+    "dueDate": "Due Date",
+    "estimatedHours": "Est. Hours",
+    "created": "Created",
+    "updated": "Updated",
+    "comments": "Comments",
+    "noComments": "No comments yet",
+    "deleteConfirm": "Delete this ticket?",
+    "deleteWarning": "This cannot be undone."
+  },
+  "labels": {
+    "feature": "Feature",
+    "bug": "Bug",
+    "improvement": "Improvement",
+    "research": "Research",
+    "blocked": "Blocked"
+  },
+  "priority": {
+    "P0": "Critical",
+    "P1": "High",
+    "P2": "Medium",
+    "P3": "Low"
+  },
+  "empty": {
+    "column": "No tickets here",
+    "board": "Board is empty — create your first ticket",
+    "filtered": "No tickets match your filters"
+  },
+  "keyboard": {
+    "hint": "Press N to create a ticket · Esc to close"
+  },
+  "board": {
+    "overdue": "Overdue",
+    "dragToMove": "Drag to move",
+    "dropHere": "Drop here",
+    "addTo": "Add to {{column}}",
+    "headline": "Track every initiative across the team",
+    "description": "A Kanban board that connects agent activity to outcomes — from backlog to done, with full visibility per ticket.",
+    "feature0": "Drag-and-drop across 5 workflow stages",
+    "feature1": "Priority triage from P0 (critical) to P3",
+    "feature2": "Label taxonomy: feature, bug, improvement, research, blocked",
+    "feature3": "Assignee tracking across the agent team"
+  }
+}

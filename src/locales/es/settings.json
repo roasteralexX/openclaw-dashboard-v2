@@ -1,0 +1,82 @@
+{
+  "title": "Configuración",
+  "gateway": {
+    "title": "Conexión con el Gateway",
+    "urlLabel": "URL WebSocket",
+    "tokenLabel": "Token de Autenticación",
+    "urlPlaceholder": "ws://localhost:18789",
+    "tokenPlaceholder": "Tu token de autenticación del gateway",
+    "tokenHint": "Encuentra tu token en ~/.openclaw/openclaw.json → auth.token",
+    "infoTitle": "Información del Gateway",
+    "tickInterval": "Intervalo de tick",
+    "endpoint": "Endpoint"
+  },
+  "onboarding": {
+    "headline": "Conecta tu Gateway OpenClaw",
+    "desc": "Ingresa la URL del gateway y el token de autenticación para desbloquear el dashboard completo."
+  },
+  "guide": {
+    "toggle": {
+      "show": "▼ Mostrar guía de configuración",
+      "hide": "▲ Ocultar guía de configuración"
+    },
+    "steps": {
+      "0": {
+        "title": "Inicia tu Gateway OpenClaw",
+        "desc": "Ejecuta el proceso del gateway en tu máquina. Escucha en el puerto 18789 por defecto.",
+        "code": "openclaw gateway start"
+      },
+      "1": {
+        "title": "Encuentra tu token de autenticación",
+        "desc": "Copia el token del archivo de configuración de tu gateway.",
+        "code": "cat ~/.openclaw/openclaw.json | grep token"
+      },
+      "2": {
+        "title": "Ingresa URL + token arriba",
+        "desc": "Pega la URL WebSocket y tu token, luego haz clic en Conectar."
+      }
+    }
+  },
+  "validation": {
+    "urlRequired": "La URL es obligatoria",
+    "urlInvalid": "Debe comenzar con ws:// o wss://",
+    "urlBadFormat": "Formato de URL inválido",
+    "tokenRequired": "El token de autenticación es obligatorio",
+    "tokenShort": "El token debe tener al menos 32 caracteres (acceso de nivel operador)"
+  },
+  "security": {
+    "insecureWarning": "Las conexiones ws:// a hosts remotos están bloqueadas. Usa wss:// o conéctate a 127.0.0.1.",
+    "breakGlassAck": "Entiendo que esta conexión es insegura y acepto el riesgo.",
+    "tlsFingerprintLabel": "Huella TLS (opcional)",
+    "tlsFingerprintHint": "Huella SHA-256 para anclaje de certificado (gateway.remote.tlsFingerprint)."
+  },
+  "audit": {
+    "title": "Registro de Auditoría de Seguridad",
+    "clear": "Limpiar registro",
+    "empty": "No hay eventos de auditoría en esta sesión.",
+    "toggle": {
+      "show": "▼ Mostrar registro de auditoría",
+      "hide": "▲ Ocultar registro de auditoría"
+    },
+    "columns": {
+      "timestamp": "Hora",
+      "action": "Acción",
+      "detail": "Detalle"
+    }
+  },
+  "info": {
+    "version": "Versión",
+    "nodeId": "ID de Nodo",
+    "protocol": "Protocolo",
+    "maxTokens": "Máx. Tokens",
+    "streaming": "Streaming"
+  },
+  "toast": {
+    "saved": "Configuración guardada"
+  },
+  "about": {
+    "title": "Acerca de",
+    "description": "OpenClaw Dashboard v2 — Centro de Comando Industrial para orquestación de agentes IA, monitoreo de crons y gestión de workflows.",
+    "meta": "Construido con React + TypeScript + Three.js · Gateway Protocol v3"
+  }
+}

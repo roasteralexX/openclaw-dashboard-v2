@@ -1,0 +1,445 @@
+.settings {
+  max-width: 600px;
+}
+
+.section {
+  background: var(--c-surface-raised);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5);
+  margin-bottom: var(--sp-5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Onboarding header (disconnected state) */
+.onboardingSection {
+  text-align: center;
+  padding-bottom: var(--sp-6);
+}
+
+.onboardingIcon {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--sp-2);
+}
+
+.onboardingHeadline {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--c-text-primary);
+  margin-bottom: var(--sp-2);
+}
+
+.onboardingDesc {
+  font-size: var(--fs-sm);
+  color: var(--c-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+/* Token hint */
+.tokenHint {
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  margin-top: var(--sp-1);
+}
+
+.tokenHint code {
+  color: var(--c-accent-500);
+  font-family: var(--ff-mono);
+}
+
+/* Gateway info grid */
+.gatewayInfoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+  font-size: var(--fs-sm);
+  font-family: var(--ff-mono);
+}
+
+.gatewayInfoKey {
+  color: var(--c-text-muted);
+}
+
+.gatewayInfoVal {
+  color: var(--c-accent-500);
+}
+
+.gatewayInfoValMuted {
+  color: var(--c-text-secondary);
+}
+
+/* About section */
+.aboutText {
+  font-size: var(--fs-sm);
+  color: var(--c-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+.aboutMeta {
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  margin-top: var(--sp-3);
+  font-family: var(--ff-mono);
+}
+
+.sectionTitle {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--c-text-primary);
+  margin-bottom: var(--sp-4);
+}
+
+.field {
+  margin-bottom: var(--sp-4);
+}
+
+.label {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--c-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--sp-2);
+}
+
+.input {
+  width: 100%;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-border);
+  background: var(--c-base-700);
+  color: var(--c-text-primary);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-sm);
+  transition: border-color var(--t-fast);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--c-accent-500);
+  box-shadow: var(--shadow-glow-accent);
+}
+
+.btnRow {
+  display: flex;
+  gap: var(--sp-3);
+  margin-top: var(--sp-4);
+}
+
+.btn {
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  border: 1px solid var(--c-border);
+  transition: all var(--t-fast);
+  font-family: var(--ff-display);
+}
+
+.btnPrimary {
+  background: var(--c-accent-500);
+  color: var(--c-text-inverse);
+  border-color: var(--c-accent-500);
+}
+
+.btnPrimary:hover {
+  background: var(--c-accent-400);
+  box-shadow: var(--shadow-glow-accent);
+}
+
+.btnGhost {
+  background: transparent;
+  color: var(--c-text-secondary);
+}
+
+.btnGhost:hover {
+  background: var(--c-base-600);
+  color: var(--c-text-primary);
+}
+
+/* ── Input validation ───────────────────────────── */
+
+.inputError {
+  border-color: var(--c-error) !important;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.12);
+}
+
+.fieldError {
+  font-size: var(--fs-xs);
+  color: var(--c-error);
+  margin-top: var(--sp-1);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── Button variants ────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.btnDanger {
+  color: var(--c-error);
+  border-color: var(--c-error);
+  opacity: 0.8;
+}
+
+.btnDanger:hover {
+  background: rgba(239, 68, 68, 0.08);
+  opacity: 1;
+}
+
+/* ── Status strip ───────────────────────────────── */
+
+.statusStrip {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  margin-top: var(--sp-3);
+  border: 1px solid transparent;
+  transition: all var(--t-fast);
+}
+
+.statusStripConnected {
+  background: rgba(52, 211, 153, 0.08);
+  border-color: rgba(52, 211, 153, 0.2);
+  color: var(--c-success);
+}
+
+.statusStripError {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.2);
+  color: var(--c-error);
+}
+
+.statusStripConnecting {
+  background: rgba(251, 191, 36, 0.08);
+  border-color: rgba(251, 191, 36, 0.2);
+  color: var(--c-warn-400);
+}
+
+.statusStripIdle {
+  background: var(--c-base-700);
+  border-color: var(--c-border);
+  color: var(--c-text-muted);
+}
+
+/* ── Gateway info grid ──────────────────────────── */
+
+.gatewayInfoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ── Guide toggle ───────────────────────────────── */
+
+.guideToggle {
+  margin-top: var(--sp-4);
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--t-fast);
+  font-family: var(--ff-mono);
+}
+
+.guideToggle:hover {
+  color: var(--c-accent-500);
+}
+
+/* ── Setup guide ────────────────────────────────── */
+
+.setupGuide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  margin-top: var(--sp-5);
+  text-align: left;
+}
+
+.setupStep {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: flex-start;
+}
+
+.setupStepNum {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--c-accent-200);
+  border: 1px solid var(--c-accent-300);
+  color: var(--c-accent-500);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-mono);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.setupStepBody {
+  flex: 1;
+}
+
+.setupStepTitle {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--c-text-primary);
+  margin-bottom: 2px;
+}
+
+.setupStepDesc {
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--sp-2);
+}
+
+.setupCode {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  background: var(--c-base-900);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-sm);
+  padding: var(--sp-2) var(--sp-3);
+  color: var(--c-accent-500);
+}
+
+/* ── Security banner ────────────────────────────── */
+
+.securityBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  background: rgba(255, 179, 0, 0.08);
+  border: 1px solid rgba(255, 179, 0, 0.3);
+  color: var(--c-warn-400);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-relaxed);
+  margin-top: var(--sp-4);
+}
+
+.securityBannerIcon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.breakGlassRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-3);
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  cursor: pointer;
+}
+
+.breakGlassRow input[type='checkbox'] {
+  accent-color: var(--c-warn-400);
+  cursor: pointer;
+}
+
+/* ── Audit log ──────────────────────────────────── */
+
+.auditToggle {
+  margin-top: var(--sp-2);
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--t-fast);
+  font-family: var(--ff-mono);
+  padding: 0;
+}
+
+.auditToggle:hover {
+  color: var(--c-accent-500);
+}
+
+.auditEmpty {
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  font-family: var(--ff-mono);
+  padding: var(--sp-3) 0;
+}
+
+.auditTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-xs);
+  font-family: var(--ff-mono);
+  margin-top: var(--sp-3);
+}
+
+.auditTable th {
+  text-align: left;
+  color: var(--c-text-muted);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: var(--sp-1) var(--sp-2);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.auditRow td {
+  padding: var(--sp-1) var(--sp-2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  vertical-align: top;
+}
+
+.auditTimestamp {
+  color: var(--c-text-muted);
+  white-space: nowrap;
+}
+
+.auditAction {
+  color: var(--c-accent-500);
+  white-space: nowrap;
+}
+
+.auditDetail {
+  color: var(--c-text-secondary);
+  word-break: break-all;
+}
+
+.auditClearBtn {
+  margin-left: auto;
+  display: block;
+  margin-top: var(--sp-3);
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--ff-mono);
+  transition: color var(--t-fast);
+  padding: 0;
+}
+
+.auditClearBtn:hover {
+  color: var(--c-error);
+}
+
+/* ── Status strip suspended ─────────────────────── */
+
+.statusStripSuspended {
+  background: rgba(255, 179, 0, 0.08);
+  border-color: rgba(255, 179, 0, 0.3);
+  color: var(--c-warn-400);
+}

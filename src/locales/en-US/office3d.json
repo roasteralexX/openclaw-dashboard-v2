@@ -1,0 +1,60 @@
+{
+  "title": "3D Office",
+  "subtitle": "Live agent workspace visualization",
+  "controls": {
+    "resetCamera": "Reset Camera",
+    "resetView": "Reset View",
+    "toggleGrid": "Toggle Grid",
+    "toggleLabels": "Toggle Labels",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out"
+  },
+  "desk": {
+    "idle": "Idle",
+    "working": "Working",
+    "offline": "Offline",
+    "unassigned": "Unassigned",
+    "assignAgent": "Assign Agent",
+    "removeAgent": "Remove Agent",
+    "deskId": "Desk {{id}}"
+  },
+  "agent": {
+    "currentTask": "Current Task",
+    "session": "Session",
+    "uptime": "Uptime",
+    "tokensToday": "Tokens Today",
+    "noTask": "No active task"
+  },
+  "legend": {
+    "title": "Status",
+    "working": "Working",
+    "idle": "Idle",
+    "offline": "Offline"
+  },
+  "loading": "Building office…",
+  "webglError": "WebGL is not supported in your browser",
+  "emptyState": {
+    "headline": "See your agents at their desks",
+    "description": "A spatial view of your agent team in real time — who's active, idle, or offline at a glance, with click-to-inspect details.",
+    "feature0": "Real-time desk occupancy by agent status",
+    "feature1": "Click any desk to inspect agent stats",
+    "feature2": "Edit mode to rearrange the office layout",
+    "feature3": "Full 3D navigation with orbit controls"
+  },
+  "editMode": {
+    "banner": "Edit Mode active — drag desks to reposition · select a desk to rotate or inspect",
+    "on": "Edit Mode ON",
+    "label": "Edit Mode",
+    "resetLayout": "Reset Layout",
+    "resetView": "Reset View",
+    "rotate": "Rotate 90°"
+  },
+  "panel": {
+    "status": "Status",
+    "tokensTotal": "Tokens Total",
+    "lastAction": "Last Action",
+    "position": "Position",
+    "emptyDesk": "Empty Desk",
+    "noAgent": "No agent assigned"
+  }
+}

@@ -1,0 +1,222 @@
+.crons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+}
+
+.connectionHint {
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  font-family: var(--ff-mono);
+  background: var(--c-warn-100);
+  border: 1px solid var(--c-warn-200);
+  color: var(--c-warn-500);
+}
+
+.cronCard {
+  background: var(--c-surface-raised);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+
+.cronCard:hover {
+  border-color: var(--c-border-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.cronHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+}
+
+.cronName {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--c-text-primary);
+  flex: 1;
+}
+
+.cronSchedule {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  background: var(--c-base-700);
+  padding: 2px 8px;
+  border-radius: var(--r-sm);
+}
+
+.cronAgent {
+  font-size: var(--fs-xs);
+  color: var(--c-accent-500);
+  font-family: var(--ff-mono);
+}
+
+.cronDisabled {
+  opacity: 0.5;
+}
+
+/* ── Toggle Switch ──────────────────────────────── */
+
+.toggleDot {
+  width: 36px;
+  height: 20px;
+  border-radius: var(--r-full);
+  position: relative;
+  cursor: pointer;
+  transition: background var(--t-fast);
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.toggleDot:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.toggleOn {
+  background: var(--c-success);
+}
+
+.toggleOff {
+  background: var(--c-base-300);
+}
+
+.toggleDot::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--c-text-inverse);
+  top: 2px;
+  transition: transform var(--t-fast);
+}
+
+.toggleOn::after {
+  transform: translateX(18px);
+}
+
+.toggleOff::after {
+  transform: translateX(2px);
+}
+
+.toggling {
+  animation: pulse-toggle 0.6s ease infinite;
+}
+
+@keyframes pulse-toggle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── Run Button ─────────────────────────────────── */
+
+.runBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--c-border);
+  background: transparent;
+  color: var(--c-accent-500);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  transition: all var(--t-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.runBtn:hover:not(:disabled) {
+  background: var(--c-accent-100);
+  border-color: var(--c-accent-500);
+}
+
+.runBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.runBtnSpinning {
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ── Flash Message ──────────────────────────────── */
+
+.flashMsg {
+  padding: var(--sp-2) var(--sp-5);
+  font-size: var(--fs-xs);
+  font-family: var(--ff-mono);
+  animation: flash-in 0.3s ease;
+}
+
+.flashSuccess {
+  color: var(--c-success);
+  background: var(--c-accent-100);
+}
+
+.flashError {
+  color: var(--c-error);
+  background: rgba(255, 82, 82, 0.08);
+}
+
+@keyframes flash-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Execution Timeline ─────────────────────────── */
+
+.execTimeline {
+  display: flex;
+  gap: 3px;
+  padding: 0 var(--sp-5) var(--sp-4);
+  align-items: flex-end;
+  height: 48px;
+}
+
+.execBlock {
+  flex: 1;
+  min-width: 8px;
+  max-width: 24px;
+  border-radius: var(--r-sm) var(--r-sm) 0 0;
+  transition: all var(--t-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.execBlock:hover {
+  opacity: 0.8;
+  transform: scaleY(1.1);
+  transform-origin: bottom;
+}
+
+.execSuccess { background: var(--c-success); }
+.execFailed { background: var(--c-error); }
+.execRunning { background: var(--c-running); }
+.execScheduled { background: var(--c-base-300); }
+
+.cronMeta {
+  display: flex;
+  gap: var(--sp-6);
+  padding: 0 var(--sp-5) var(--sp-4);
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  font-family: var(--ff-mono);
+}
+
+.cronMetaLabel {
+  color: var(--c-text-secondary);
+}

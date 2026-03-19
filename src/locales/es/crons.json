@@ -1,0 +1,28 @@
+{
+  "title": "Tareas Cron",
+  "subtitle": "Automatiza y observa tu pipeline de agentes",
+  "loading": "Cargando tareas cron desde el gateway…",
+  "features": {
+    "0": "Programador de expresiones cron por agente",
+    "1": "Historial de ejecuciones con seguimiento de estado",
+    "2": "Activar / desactivar sin eliminar",
+    "3": "Activar bajo demanda para ejecuciones inmediatas"
+  },
+  "job": {
+    "disabled": "Desactivado",
+    "enable": "Activar cron",
+    "lastRun": "Último",
+    "runs": "Ejecuciones",
+    "failures": "Fallos",
+    "trigger": "Activar ahora",
+    "delete": "Eliminar cron",
+    "noHistory": "Sin ejecuciones aún"
+  },
+  "toast": {
+    "enabled": "Activado",
+    "disabled": "Desactivado",
+    "triggered": "Activado",
+    "toggleFailed": "Error al alternar",
+    "runFailed": "Error en la ejecución"
+  }
+}

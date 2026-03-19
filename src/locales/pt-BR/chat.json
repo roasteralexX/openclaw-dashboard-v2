@@ -1,0 +1,54 @@
+{
+  "title": "Command Chat",
+  "subtitle": "Comunicação direta com sessões de agentes IA",
+  "noAgentSelected": "Selecione um agente para começar a conversar",
+  "disconnected": {
+    "headline": "Gateway Desconectado",
+    "description": "Conecte seu Gateway OpenClaw para acessar sessões de chat ao vivo com agentes."
+  },
+  "agentList": {
+    "searchPlaceholder": "Filtrar agentes…",
+    "empty": "Nenhum agente disponível",
+    "noMatch": "Nenhum agente corresponde a \"{{query}}\""
+  },
+  "conversation": {
+    "loadEarlier": "Carregar mensagens anteriores",
+    "loadingHistory": "Carregando histórico…",
+    "historyEmpty": "Nenhuma mensagem ainda — envie a primeira",
+    "streaming": "Gerando…",
+    "stopGenerating": "Parar geração"
+  },
+  "input": {
+    "placeholder": "Enviar mensagem para {{agentName}}…",
+    "placeholderDefault": "Selecione um agente para conversar",
+    "send": "Enviar",
+    "charCount": "{{count}}/4000",
+    "rateLimitTitle": "{{count}} de 5 envios disponíveis",
+    "rateLimited": "Enviando rápido demais — aguarde um momento."
+  },
+  "message": {
+    "copy": "Copiar",
+    "copied": "Copiado!",
+    "retry": "Tentar novamente",
+    "failed": "Falha ao enviar",
+    "sendFailed": "Falha ao enviar: {{message}}",
+    "unknownError": "Erro desconhecido"
+  },
+  "agentInfo": {
+    "title": "Informações do Agente",
+    "status": "Status",
+    "model": "Modelo",
+    "sessionStarted": "Sessão Iniciada",
+    "tokensToday": "Tokens Hoje",
+    "tokensTotal": "Total de Tokens",
+    "abortRun": "Abortar Execução Atual",
+    "noSession": "Nenhuma sessão ativa",
+    "unknown": "Desconhecido"
+  },
+  "status": {
+    "active": "Ativo",
+    "idle": "Ocioso",
+    "error": "Erro",
+    "offline": "Offline"
+  }
+}

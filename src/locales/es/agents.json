@@ -1,0 +1,37 @@
+{
+  "title": "Monitor de Agentes",
+  "subtitle": "Sesiones de agentes en tiempo real e interfaz de chat",
+  "selectAgent": "Selecciona un agente para ver detalles y chatear",
+  "noRecentActions": "Sin acciones recientes",
+  "sessionHistory": "Historial de Sesión",
+  "loadEarlier": "Cargar mensajes anteriores",
+  "loadingHistory": "Cargando historial…",
+  "typingIndicator": "El agente está escribiendo",
+  "chat": {
+    "inputPlaceholder": "Enviar un mensaje a este agente…",
+    "retry": "Reintentar",
+    "failed": "Error al enviar el mensaje",
+    "sendFailed": "Error al enviar: {{message}}",
+    "unknownError": "error desconocido",
+    "charCount": "{{count}}/4000",
+    "rateLimited": "Enviando demasiado rápido — espera un momento."
+  },
+  "status": {
+    "active": "Activo",
+    "idle": "Inactivo",
+    "error": "Error",
+    "offline": "Sin conexión"
+  },
+  "session": {
+    "tokens": "Tokens",
+    "model": "Modelo",
+    "started": "Iniciado"
+  },
+  "overview": {
+    "recentActions": "Acciones Recientes",
+    "totalTokens": "Total de Tokens",
+    "tokensToday": "Tokens Hoy",
+    "activeSession": "Sesión Activa",
+    "noSession": "Sin sesión activa"
+  }
+}

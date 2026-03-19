@@ -1,0 +1,28 @@
+{
+  "title": "Cron Jobs",
+  "subtitle": "Automate and observe your agent pipeline",
+  "loading": "Loading crons from gateway…",
+  "features": {
+    "0": "Cron expression scheduler per agent",
+    "1": "Execution history with status tracking",
+    "2": "Enable / disable without deleting",
+    "3": "Trigger on-demand for immediate runs"
+  },
+  "job": {
+    "disabled": "Disabled",
+    "enable": "Enable cron",
+    "lastRun": "Last",
+    "runs": "Runs",
+    "failures": "Failures",
+    "trigger": "Trigger now",
+    "delete": "Delete cron",
+    "noHistory": "No executions yet"
+  },
+  "toast": {
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "triggered": "Triggered",
+    "toggleFailed": "Toggle failed",
+    "runFailed": "Run failed"
+  }
+}

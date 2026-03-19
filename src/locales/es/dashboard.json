@@ -1,0 +1,70 @@
+{
+  "title": "Resumen",
+  "subtitle": "Estado del gateway y actividad de agentes en tiempo real",
+  "kpi": {
+    "activeSessions": "Sesiones Activas",
+    "activeChannels": "Canales Activos",
+    "tokensUsed": "Tokens Usados",
+    "uptime": "Uptime",
+    "latency": "Latencia",
+    "eventsPerMin": "Eventos / min"
+  },
+  "health": {
+    "title": "Estado del Gateway",
+    "status": {
+      "healthy": "Saludable",
+      "degraded": "Degradado",
+      "offline": "Sin conexión"
+    },
+    "node": "Nodo",
+    "region": "Región",
+    "model": "Modelo",
+    "ping": "Ping",
+    "uptime": "Uptime",
+    "version": "Versión"
+  },
+  "tokenChart": {
+    "title": "Uso de Tokens",
+    "titleFull": "Uso de Tokens — Últimos 30 Días",
+    "legend": {
+      "input": "Entrada",
+      "output": "Salida",
+      "total": "Total"
+    },
+    "noData": "No hay datos de tokens disponibles"
+  },
+  "recentEvents": {
+    "title": "Eventos Recientes",
+    "empty": "No hay eventos aún",
+    "seeAll": "Ver todos los eventos"
+  },
+  "sessionTable": {
+    "title": "Sesiones",
+    "columns": {
+      "agent": "Agente",
+      "status": "Estado",
+      "model": "Modelo",
+      "tokens": "Tokens",
+      "started": "Iniciado"
+    },
+    "empty": "No hay sesiones activas"
+  },
+  "statCards": {
+    "activeAgents": "Agentes Activos",
+    "tokensToday": "Tokens Hoy",
+    "cronSuccessRate": "Tasa de Éxito Cron",
+    "ticketsInProgress": "Tickets En Progreso",
+    "acrossAllAgents": "entre todos los agentes",
+    "withErrors": "{{count}} con errores",
+    "executions": "{{count}} ejecuciones",
+    "total": "{{count}} total"
+  },
+  "emptyState": {
+    "headline": "Tu centro de comando, en vivo",
+    "description": "Visibilidad en tiempo real de todos los agentes ejecutándose en tu infraestrutura — KPIs, tasa de consumo de tokens y salud del sistema en una sola vista.",
+    "feature0": "Estado de agentes en vivo en todas las sesiones",
+    "feature1": "Gráfico de uso de tokens — últimos 30 días",
+    "feature2": "Puntuación de salud cron y seguimiento de fallos",
+    "feature3": "Uptime del gateway y nodos conectados"
+  }
+}

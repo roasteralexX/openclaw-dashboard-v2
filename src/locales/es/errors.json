@@ -1,0 +1,149 @@
+{
+  "generic": {
+    "title": "Algo salió mal",
+    "message": "Ocurrió un error inesperado. Por favor, inténtalo de nuevo.",
+    "retry": "Intentar de nuevo",
+    "report": "Reportar problema"
+  },
+  "network": {
+    "offline": "Estás sin conexión",
+    "timeout": "La solicitud superó el tiempo límite",
+    "unreachable": "Servidor inaccesible",
+    "rateLimit": "Demasiadas solicitudes — espera un momento"
+  },
+  "auth": {
+    "invalidToken": "Token inválido o expirado",
+    "unauthorized": "No tienes autorización para realizar esta acción",
+    "sessionExpired": "Sesión expirada — vuelve a conectarte"
+  },
+  "gateway": {
+    "connectionFailed": "Error al conectar con el gateway",
+    "authFailed": "Fallo en la autenticación del gateway",
+    "challengeFailed": "Fallo en el handshake de desafío",
+    "rpcTimeout": "La llamada RPC expiró después de {{seconds}}s",
+    "rpcError": "Error RPC: {{message}}",
+    "disconnected": "Gateway desconectado inesperadamente",
+    "modal": {
+      "title": "Conexión fallida",
+      "codeLabel": "Código de error",
+      "whatHappened": "Qué ocurrió",
+      "howToFix": "Cómo solucionarlo",
+      "technicalDetails": "Detalles técnicos",
+      "showDetails": "Mostrar detalles técnicos",
+      "hideDetails": "Ocultar detalles técnicos",
+      "wsCode": "Código de cierre WS",
+      "rawReason": "Mensaje del gateway",
+      "tryAgain": "Intentar de nuevo",
+      "categories": {
+        "network": "Red / Conectividad",
+        "auth": "Autenticación / Configuración",
+        "protocol": "Incompatibilidad de protocolo",
+        "server": "Error del servidor"
+      },
+      "OCE-NET": {
+        "cause": "El dashboard no pudo establecer una conexión WebSocket con el host del gateway. Normalmente significa que el host es inaccesible, el puerto está cerrado o el certificado TLS es inválido.",
+        "steps": [
+          "Verifica que la URL y el puerto sean correctos (ej: wss://tu-host:puerto/)",
+          "Confirma que el proceso de OpenClaw Gateway está en ejecución en el servidor",
+          "Comprueba que el firewall del servidor permite conexiones entrantes en ese puerto",
+          "Si usas wss://, asegúrate de que el certificado TLS/SSL sea válido y no autofirmado",
+          "Intenta conectarte desde otra red para descartar problemas de firewall local"
+        ]
+      },
+      "OCE-1001": {
+        "cause": "El gateway rechazó el identificador de cliente enviado durante el handshake. El ID de cliente del dashboard no coincide con lo que el esquema del gateway espera.",
+        "steps": [
+          "Asegúrate de que tu OpenClaw Gateway sea versión 3 o superior",
+          "Actualiza el dashboard a la última versión para compatibilidad con el protocolo del gateway",
+          "Revisa la lista de clientes permitidos en la configuración del gateway",
+          "Contacta al administrador del gateway si el problema persiste"
+        ]
+      },
+      "OCE-1002": {
+        "cause": "El gateway rechazó el token de autenticación. El formato o valor del token no coincide con los requisitos del gateway.",
+        "steps": [
+          "Revisa el token en Configuración — busca espacios extra o caracteres faltantes",
+          "Genera un nuevo token en el panel de administración de OpenClaw Gateway",
+          "Asegúrate de que el token tenga los ámbitos necesarios (operator.read, operator.write)",
+          "Verifica que el token no haya expirado"
+        ]
+      },
+      "OCE-1003": {
+        "cause": "El gateway rechazó explícitamente la conexión como no autorizada. El token puede ser incorrecto, estar revocado, o el gateway requiere un método de autenticación diferente.",
+        "steps": [
+          "Verifica que el token en Configuración coincida exactamente con el configurado en el gateway",
+          "Genera un nuevo token en el panel de administración de OpenClaw Gateway",
+          "Comprueba si el gateway requiere un formato o codificación diferente de token",
+          "Revisa los registros del gateway para el motivo específico del rechazo"
+        ]
+      },
+      "OCE-1004": {
+        "cause": "El dashboard y el gateway están usando versiones de protocolo incompatibles. Esto suele ocurrir cuando alguno de los dos está desactualizado.",
+        "steps": [
+          "Actualiza tu OpenClaw Gateway a la última versión",
+          "Asegúrate de que la versión del dashboard sea compatible con el rango de protocolo soportado por el gateway",
+          "Revisa las notas de versión del gateway para cambios de protocolo incompatibles"
+        ]
+      },
+      "OCE-1005": {
+        "cause": "El gateway está limitando los intentos de conexión de este cliente. Se realizaron demasiadas solicitudes en un período corto.",
+        "steps": [
+          "Espera unos minutos antes de intentar reconectar",
+          "Reduce la frecuencia de los intentos de conexión",
+          "Verifica si otro proceso también se está conectando al mismo gateway"
+        ]
+      },
+      "OCE-1006": {
+        "cause": "El handshake de conexión con el gateway expiró. El gateway aceptó la conexión WebSocket pero no completó el proceso de autenticación en 15 segundos.",
+        "steps": [
+          "Revisa el uso de recursos del servidor gateway (CPU, memoria) — puede estar sobrecargado",
+          "Confirma que el gateway está completamente iniciado y no en estado degradado",
+          "Verifica la latencia de red entre el dashboard y el VPS",
+          "Intenta reconectar — los timeouts transitorios son comunes bajo carga"
+        ]
+      },
+      "OCE-SRV": {
+        "cause": "El gateway encontró un error interno del servidor y cerró la conexión.",
+        "steps": [
+          "Revisa los registros del servidor gateway para detalles del error",
+          "Reinicia el servicio de OpenClaw Gateway si parece bloqueado",
+          "Verifica que el gateway tenga suficientes recursos del sistema",
+          "Contacta al administrador del gateway si el error se repite"
+        ]
+      },
+      "OCE-UNKNOWN": {
+        "cause": "Ocurrió un error inesperado durante la conexión. La causa específica no pudo determinarse con la información disponible.",
+        "steps": [
+          "Revisa los detalles técnicos a continuación para ver el mensaje bruto del gateway",
+          "Consulta los registros del servidor gateway para más contexto",
+          "Intenta reconectar — algunos errores son transitorios",
+          "Si el problema persiste, contacta al administrador del gateway con los detalles del error"
+        ]
+      }
+    }
+  },
+  "board": {
+    "createFailed": "Error al crear el ticket",
+    "updateFailed": "Error al actualizar el ticket",
+    "deleteFailed": "Error al eliminar el ticket",
+    "loadFailed": "Error al cargar el tablero"
+  },
+  "agents": {
+    "listFailed": "Error al cargar la lista de agentes",
+    "historyFailed": "Error al cargar el historial de chat",
+    "sendFailed": "Error al enviar el mensaje",
+    "notFound": "Agente no encontrado"
+  },
+  "crons": {
+    "listFailed": "Error al cargar las tareas cron",
+    "createFailed": "Error al crear la tarea cron",
+    "deleteFailed": "Error al eliminar la tarea cron",
+    "triggerFailed": "Error al activar la tarea cron"
+  },
+  "validation": {
+    "required": "Este campo es obligatorio",
+    "invalidUrl": "Debe ser una URL WebSocket válida (ws:// o wss://)",
+    "tokenTooShort": "El token debe tener al menos {{min}} caracteres",
+    "invalidCron": "Expresión cron inválida"
+  }
+}

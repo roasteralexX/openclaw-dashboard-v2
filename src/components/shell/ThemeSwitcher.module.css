@@ -1,0 +1,72 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--sp-1);
+  border-radius: var(--r-full);
+  outline-offset: 3px;
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--c-accent-500);
+}
+
+/* ── Icons ───────────────────────────────────────────────── */
+
+.icon {
+  display: flex;
+  align-items: center;
+  color: var(--c-text-muted);
+  transition: color 200ms ease, transform 200ms ease;
+}
+
+.iconActive {
+  color: var(--c-accent-500);
+}
+
+.iconSun {
+  transform: rotate(0deg);
+}
+
+.iconMoon {
+  transform: rotate(0deg);
+}
+
+/* ── Track ───────────────────────────────────────────────── */
+
+.track {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border-radius: var(--r-full);
+  background: var(--c-base-400);
+  border: 1px solid var(--c-border);
+  transition: background 200ms ease, border-color 200ms ease;
+  flex-shrink: 0;
+}
+
+.trackLight {
+  background: var(--c-accent-200);
+  border-color: var(--c-border-accent);
+}
+
+/* ── Thumb ───────────────────────────────────────────────── */
+
+.thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--c-text-muted);
+  transition: transform 200ms ease, background 200ms ease;
+}
+
+.thumbLight {
+  transform: translateX(16px);
+  background: var(--c-accent-500);
+}

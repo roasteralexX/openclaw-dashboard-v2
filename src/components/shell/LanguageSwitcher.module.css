@@ -1,0 +1,115 @@
+.root {
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--r-full);
+  background: var(--c-base-600);
+  border: 1px solid var(--c-border);
+  color: var(--c-text-secondary);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  cursor: pointer;
+  transition: border-color 150ms, color 150ms;
+  white-space: nowrap;
+}
+
+.trigger:hover:not(:disabled) {
+  border-color: var(--c-accent-500);
+  color: var(--c-text-primary);
+}
+
+.trigger:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.flag {
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.short {
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.06em;
+}
+
+.chevron {
+  font-size: 0.625rem;
+  color: var(--c-text-muted);
+  transition: transform 150ms;
+  display: inline-block;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  color: var(--c-accent-500);
+}
+
+/* Dropdown menu */
+.menu {
+  position: absolute;
+  top: calc(100% + var(--sp-2));
+  right: 0;
+  min-width: 160px;
+  background: var(--c-base-700);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  padding: var(--sp-1) 0;
+  list-style: none;
+  z-index: 200;
+  animation: menu-in 120ms ease-out;
+}
+
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  width: 100%;
+  padding: var(--sp-2) var(--sp-4);
+  background: none;
+  border: none;
+  color: var(--c-text-secondary);
+  font-family: var(--ff-body);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  transition: background 100ms, color 100ms;
+  text-align: left;
+}
+
+.option:hover {
+  background: var(--c-base-600);
+  color: var(--c-text-primary);
+}
+
+.optionActive {
+  color: var(--c-accent-500);
+}
+
+.optionLong {
+  flex: 1;
+}
+
+.check {
+  color: var(--c-accent-500);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+}

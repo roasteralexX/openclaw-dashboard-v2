@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "overview": "Visão Geral",
+    "agents": "Agentes",
+    "crons": "Tarefas Cron",
+    "office": "Escritório 3D",
+    "board": "Quadro de Projetos",
+    "settings": "Configurações",
+    "health": "Saúde GW",
+    "chat": "Chat"
+  },
+  "buttons": {
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "confirm": "Confirmar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "close": "Fechar",
+    "retry": "Tentar novamente",
+    "connect": "Conectar",
+    "disconnect": "Desconectar"
+  },
+  "status": {
+    "loading": "Carregando…",
+    "error": "Algo deu errado",
+    "success": "Concluído",
+    "empty": "Nada por aqui ainda",
+    "connecting": "Conectando…",
+    "connected": "Conectado",
+    "disconnected": "Desconectado",
+    "suspended": "Conexão suspensa"
+  },
+  "labels": {
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "language": "Idioma",
+    "theme": "Tema",
+    "version": "Versão",
+    "tokensToday": "tokens hoje"
+  },
+  "actions": {
+    "create": "Criar",
+    "edit": "Editar",
+    "view": "Visualizar",
+    "export": "Exportar",
+    "import": "Importar",
+    "refresh": "Atualizar",
+    "clearAll": "Limpar tudo",
+    "connectGateway": "Conectar Gateway →"
+  },
+  "dates": {
+    "today": "Hoje",
+    "yesterday": "Ontem",
+    "thisWeek": "Esta semana",
+    "justNow": "Agora mesmo",
+    "ago": "há {{value}}",
+    "secondsAgo": "há {{count}} segundo",
+    "secondsAgo_other": "há {{count}} segundos",
+    "minutesAgo": "há {{count}} minuto",
+    "minutesAgo_other": "há {{count}} minutos",
+    "hoursAgo": "há {{count}} hora",
+    "hoursAgo_other": "há {{count}} horas",
+    "daysAgo": "há {{count}} dia",
+    "daysAgo_other": "há {{count}} dias"
+  },
+  "time": {
+    "justNow": "agora mesmo",
+    "secsAgo": "{{count}}s atrás",
+    "minsAgo": "{{count}}m atrás",
+    "hoursAgo": "{{count}}h atrás",
+    "daysAgo": "{{count}}d atrás",
+    "groups": {
+      "justNow": "Agora mesmo",
+      "lastMinute": "Último minuto",
+      "last5Minutes": "Últimos 5 minutos",
+      "lastHour": "Última hora",
+      "earlier": "Mais cedo"
+    }
+  },
+  "pagination": {
+    "page": "Página",
+    "of": "de",
+    "items": "{{count}} item",
+    "items_other": "{{count}} itens",
+    "loadMore": "Carregar mais",
+    "showingOf": "Exibindo {{shown}} de {{total}}"
+  },
+  "accessibility": {
+    "closeModal": "Fechar modal",
+    "openMenu": "Abrir menu",
+    "toggleTheme": "Alternar tema de cores",
+    "switchLanguage": "Trocar idioma",
+    "dragHandle": "Arraste para reordenar",
+    "required": "Campo obrigatório",
+    "switchToLightMode": "Mudar para modo claro",
+    "switchToDarkMode": "Mudar para modo escuro",
+    "lightMode": "Modo claro",
+    "darkMode": "Modo escuro",
+    "sendMessage": "Enviar mensagem",
+    "closeFeed": "Fechar feed"
+  },
+  "priority": {
+    "P0": "Crítico",
+    "P1": "Alto",
+    "P2": "Médio",
+    "P3": "Baixo"
+  },
+  "sidebar": {
+    "modules": "Módulos",
+    "system": "Sistema",
+    "connectionError": "Erro de Conexão",
+    "events": "Eventos",
+    "eventsUnread": "Eventos ({{count}})",
+    "openEventFeed": "Abrir feed de eventos",
+    "resumeConnection": "Retomar",
+    "secureConnection": "Conexão criptografada (wss://)",
+    "localConnection": "Conexão local (ws://localhost)",
+    "insecureConnection": "Inseguro — use wss://"
+  },
+  "footer": {
+    "live": "AO VIVO",
+    "simulation": "SIMULAÇÃO",
+    "connectedMessage": "Conectado ao seu Gateway OpenClaw — todos os dados são ao vivo e em tempo real.",
+    "disconnectedMessage": "Sem conexão com o gateway — todos os dados exibidos são sintéticos e não refletem atividade real.",
+    "connectGateway": "Conectar gateway →",
+    "brand": "OpenClaw v2"
+  },
+  "eventFeed": {
+    "title": "Feed de Eventos",
+    "clear": "Limpar",
+    "empty": "Nenhum evento ainda",
+    "emptyHint": "Conecte seu gateway para ver eventos ao vivo"
+  }
+}

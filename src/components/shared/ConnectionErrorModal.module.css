@@ -1,0 +1,287 @@
+/* ── Backdrop ─────────────────────────────────────── */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 16, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 900;
+}
+
+/* ── Modal ────────────────────────────────────────── */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 901;
+
+  width: min(520px, calc(100vw - 32px));
+  max-height: min(700px, calc(100vh - 48px));
+  overflow-y: auto;
+
+  background: var(--c-surface-overlay);
+  border: 1px solid rgba(255, 82, 82, 0.20);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-error);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ───────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-4) var(--sp-5);
+  border-bottom: 1px solid rgba(255, 82, 82, 0.15);
+  border-left: 3px solid var(--c-error);
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  background: rgba(255, 82, 82, 0.05);
+  flex-shrink: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.errorIcon {
+  color: var(--c-error);
+}
+
+.title {
+  font-family: var(--ff-display);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--c-text-primary);
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--c-text-secondary);
+  font-size: var(--fs-base);
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: var(--r-sm);
+  transition: color var(--t-fast);
+}
+
+.closeBtn:hover {
+  color: var(--c-text-primary);
+}
+
+/* ── Code + category row ──────────────────────────── */
+
+.codeRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5) 0;
+  flex-shrink: 0;
+}
+
+.codeBadge {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--c-error);
+  background: rgba(255, 82, 82, 0.10);
+  border: 1px solid rgba(255, 82, 82, 0.25);
+  border-radius: var(--r-sm);
+  padding: 2px 10px;
+  letter-spacing: 0.05em;
+}
+
+.categoryBadge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--c-text-secondary);
+  background: var(--c-base-600);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-full);
+  padding: 3px 10px;
+}
+
+.categoryIcon {
+  color: var(--c-text-secondary);
+}
+
+/* ── Body ─────────────────────────────────────────── */
+
+.body {
+  padding: var(--sp-4) var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  flex: 1;
+  min-height: 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.sectionLabel {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+}
+
+.causeText {
+  font-size: var(--fs-sm);
+  color: var(--c-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+/* ── Steps list ───────────────────────────────────── */
+
+.stepsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.stepsItem {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+  font-size: var(--fs-sm);
+  color: var(--c-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+.stepNum {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  color: var(--c-accent-500);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ── Technical details ────────────────────────────── */
+
+.details {
+  border-top: 1px solid var(--c-border);
+  padding-top: var(--sp-3);
+}
+
+.detailsToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--c-text-muted);
+  padding: 0;
+  transition: color var(--t-fast);
+}
+
+.detailsToggle:hover {
+  color: var(--c-text-secondary);
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-2) var(--sp-4);
+  margin-top: var(--sp-3);
+  padding: var(--sp-3);
+  background: var(--c-base-700);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+}
+
+.detailKey {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--c-text-muted);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.detailVal {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  color: var(--c-text-secondary);
+  word-break: break-all;
+}
+
+/* ── Footer ───────────────────────────────────────── */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  border-top: 1px solid var(--c-border);
+  flex-shrink: 0;
+}
+
+.btnGhost {
+  background: none;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  color: var(--c-text-secondary);
+  cursor: pointer;
+  font-family: var(--ff-display);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  padding: var(--sp-2) var(--sp-4);
+  transition: border-color var(--t-fast), color var(--t-fast);
+}
+
+.btnGhost:hover {
+  border-color: var(--c-border-accent);
+  color: var(--c-text-primary);
+}
+
+.btnPrimary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--c-accent-200);
+  border: 1px solid var(--c-border-accent);
+  border-radius: var(--r-md);
+  color: var(--c-accent-500);
+  cursor: pointer;
+  font-family: var(--ff-display);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  padding: var(--sp-2) var(--sp-4);
+  transition: background var(--t-fast), box-shadow var(--t-fast);
+}
+
+.btnPrimary:hover {
+  background: rgba(0, 229, 255, 0.15);
+  box-shadow: var(--c-accent-glow);
+}

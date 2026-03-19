@@ -1,0 +1,65 @@
+{
+  "title": "Salud del Gateway",
+  "subtitle": "Diagnóstico en tiempo real de tu capa RPC",
+  "badge": {
+    "healthy": "SALUDABLE",
+    "degraded": "DEGRADADO",
+    "offline": "OFFLINE"
+  },
+  "poll": {
+    "live": "EN VIVO — actualizando cada {{interval}}s"
+  },
+  "kpi": {
+    "totalCalls": "Total de Llamadas",
+    "avgLatency": "Latencia Promedio",
+    "errorRate": "Tasa de Errores",
+    "activeNodes": "Nodos Activos",
+    "ms": "ms",
+    "pct": "%"
+  },
+  "latencyChart": {
+    "title": "Historial de Latencia",
+    "noData": "Recopilando datos…",
+    "ms": "ms",
+    "tooltip": "{{method}}: {{ms}}ms"
+  },
+  "nodes": {
+    "title": "Salud de los Nodos",
+    "load": "Carga",
+    "ping": "Ping",
+    "region": "Región",
+    "model": "Modelo",
+    "status": {
+      "active": "Activo",
+      "degraded": "Degradado",
+      "offline": "Offline"
+    },
+    "empty": "Ningún nodo reportado por el gateway"
+  },
+  "rpc": {
+    "title": "Estadísticas de Métodos RPC",
+    "method": "Método",
+    "calls": "Llamadas",
+    "avgMs": "Promedio (ms)",
+    "p95Ms": "P95 (ms)",
+    "errors": "Errores",
+    "lastError": "Último error: {{msg}}"
+  },
+  "info": {
+    "version": "Versión",
+    "uptime": "Tiempo Activo",
+    "started": "Iniciado",
+    "models": "Modelos",
+    "nodes": "Nodos"
+  },
+  "empty": {
+    "headline": "Monitor de Salud del Gateway",
+    "description": "Conecta tu OpenClaw Gateway para ver diagnósticos en tiempo real."
+  },
+  "features": {
+    "0": "Latencia RPC por método con gráficos históricos",
+    "1": "Tasas de error y seguimiento de fallos por endpoint",
+    "2": "Grid de salud de nodos con resaltado de estado degradado",
+    "3": "Polling en vivo con actualización cada 5 segundos"
+  }
+}

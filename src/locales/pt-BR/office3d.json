@@ -1,0 +1,60 @@
+{
+  "title": "Escritório 3D",
+  "subtitle": "Visualização ao vivo do espaço de trabalho dos agentes",
+  "controls": {
+    "resetCamera": "Redefinir Câmera",
+    "resetView": "Redefinir Vista",
+    "toggleGrid": "Alternar Grade",
+    "toggleLabels": "Alternar Etiquetas",
+    "zoomIn": "Aproximar",
+    "zoomOut": "Afastar"
+  },
+  "desk": {
+    "idle": "Ocioso",
+    "working": "Trabalhando",
+    "offline": "Offline",
+    "unassigned": "Sem Atribuição",
+    "assignAgent": "Atribuir Agente",
+    "removeAgent": "Remover Agente",
+    "deskId": "Mesa {{id}}"
+  },
+  "agent": {
+    "currentTask": "Tarefa Atual",
+    "session": "Sessão",
+    "uptime": "Uptime",
+    "tokensToday": "Tokens Hoje",
+    "noTask": "Nenhuma tarefa ativa"
+  },
+  "legend": {
+    "title": "Status",
+    "working": "Trabalhando",
+    "idle": "Ocioso",
+    "offline": "Offline"
+  },
+  "loading": "Construindo escritório…",
+  "webglError": "WebGL não é suportado no seu navegador",
+  "emptyState": {
+    "headline": "Veja seus agentes em suas mesas",
+    "description": "Uma visão espacial da sua equipe de agentes em tempo real — quem está ativo, ocioso ou offline de um relance, com detalhes ao clicar.",
+    "feature0": "Ocupação de mesas em tempo real por status do agente",
+    "feature1": "Clique em qualquer mesa para inspecionar as estatísticas do agente",
+    "feature2": "Modo de edição para reorganizar o layout do escritório",
+    "feature3": "Navegação 3D completa com controles de órbita"
+  },
+  "editMode": {
+    "banner": "Modo de Edição ativo — arraste as mesas para reposicionar · selecione uma mesa para girar ou inspecionar",
+    "on": "Modo de Edição ATIVO",
+    "label": "Modo de Edição",
+    "resetLayout": "Redefinir Layout",
+    "resetView": "Redefinir Vista",
+    "rotate": "Girar 90°"
+  },
+  "panel": {
+    "status": "Status",
+    "tokensTotal": "Total de Tokens",
+    "lastAction": "Última Ação",
+    "position": "Posição",
+    "emptyDesk": "Mesa Vazia",
+    "noAgent": "Nenhum agente atribuído"
+  }
+}

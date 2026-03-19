@@ -1,0 +1,145 @@
+/* ── Toast wrapper ───────────────────────────────── */
+
+.toast {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  padding-right: var(--sp-8);
+  min-width: 280px;
+  max-width: 360px;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--c-border);
+  background: var(--c-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  animation: toast-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  cursor: default;
+}
+
+.toastExiting {
+  animation: toast-out 0.2s ease-in forwards;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(calc(100% + var(--sp-5)));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+    max-height: 100px;
+    margin-bottom: 0;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(calc(100% + var(--sp-5)));
+    max-height: 0;
+    margin-bottom: calc(var(--sp-2) * -1);
+  }
+}
+
+/* ── Type variants ───────────────────────────────── */
+
+.toastSuccess {
+  border-color: rgba(0, 230, 118, 0.30);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-success);
+}
+
+.toastError {
+  border-color: rgba(255, 82, 82, 0.30);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-error);
+}
+
+.toastInfo {
+  border-color: var(--c-border-accent);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-accent);
+}
+
+.toastWarn {
+  border-color: rgba(255, 179, 0, 0.30);
+}
+
+/* ── Icon ────────────────────────────────────────── */
+
+.icon {
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  line-height: 1;
+}
+
+.iconSuccess { color: var(--c-success); }
+.iconError   { color: var(--c-error); }
+.iconInfo    { color: var(--c-accent-500); }
+.iconWarn    { color: var(--c-warn-500); }
+
+/* ── Message ─────────────────────────────────────── */
+
+.message {
+  font-size: var(--fs-xs);
+  font-family: var(--ff-mono);
+  color: var(--c-text-primary);
+  line-height: 1.5;
+  flex: 1;
+  word-break: break-word;
+}
+
+/* ── Close button ────────────────────────────────── */
+
+.close {
+  position: absolute;
+  top: var(--sp-2);
+  right: var(--sp-2);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--c-text-muted);
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: var(--r-sm);
+  transition: color var(--t-fast), background var(--t-fast);
+  line-height: 1;
+}
+
+.close:hover {
+  color: var(--c-text-primary);
+  background: var(--c-accent-100);
+}
+
+/* ── Progress bar ────────────────────────────────── */
+
+.progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform-origin: left;
+  animation: progress-shrink linear forwards;
+}
+
+.progressSuccess { background: var(--c-success); }
+.progressError   { background: var(--c-error); }
+.progressInfo    { background: var(--c-accent-500); }
+.progressWarn    { background: var(--c-warn-500); }
+
+@keyframes progress-shrink {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0); }
+}

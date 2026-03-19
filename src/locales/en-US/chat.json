@@ -1,0 +1,54 @@
+{
+  "title": "Command Chat",
+  "subtitle": "Direct communication with AI agent sessions",
+  "noAgentSelected": "Select an agent to start chatting",
+  "disconnected": {
+    "headline": "Gateway Disconnected",
+    "description": "Connect your OpenClaw Gateway to access live agent chat sessions."
+  },
+  "agentList": {
+    "searchPlaceholder": "Filter agents…",
+    "empty": "No agents available",
+    "noMatch": "No agents match \"{{query}}\""
+  },
+  "conversation": {
+    "loadEarlier": "Load earlier messages",
+    "loadingHistory": "Loading history…",
+    "historyEmpty": "No messages yet — send the first one",
+    "streaming": "Generating…",
+    "stopGenerating": "Stop generating"
+  },
+  "input": {
+    "placeholder": "Send a message to {{agentName}}…",
+    "placeholderDefault": "Select an agent to chat",
+    "send": "Send",
+    "charCount": "{{count}}/4000",
+    "rateLimitTitle": "{{count}} of 5 sends available",
+    "rateLimited": "Sending too fast — please wait a moment."
+  },
+  "message": {
+    "copy": "Copy",
+    "copied": "Copied!",
+    "retry": "Retry",
+    "failed": "Failed to send",
+    "sendFailed": "Send failed: {{message}}",
+    "unknownError": "Unknown error"
+  },
+  "agentInfo": {
+    "title": "Agent Info",
+    "status": "Status",
+    "model": "Model",
+    "sessionStarted": "Session Started",
+    "tokensToday": "Tokens Today",
+    "tokensTotal": "Total Tokens",
+    "abortRun": "Abort Current Run",
+    "noSession": "No active session",
+    "unknown": "Unknown"
+  },
+  "status": {
+    "active": "Active",
+    "idle": "Idle",
+    "error": "Error",
+    "offline": "Offline"
+  }
+}

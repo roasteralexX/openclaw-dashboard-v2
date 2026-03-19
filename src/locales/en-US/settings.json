@@ -1,0 +1,82 @@
+{
+  "title": "Settings",
+  "gateway": {
+    "title": "Gateway Connection",
+    "urlLabel": "WebSocket URL",
+    "tokenLabel": "Auth Token",
+    "urlPlaceholder": "ws://localhost:18789",
+    "tokenPlaceholder": "Your gateway auth token",
+    "tokenHint": "Find your token in ~/.openclaw/openclaw.json → auth.token",
+    "infoTitle": "Gateway Info",
+    "tickInterval": "Tick interval",
+    "endpoint": "Endpoint"
+  },
+  "onboarding": {
+    "headline": "Connect your OpenClaw Gateway",
+    "desc": "Enter your gateway URL and auth token below to unlock the full dashboard."
+  },
+  "guide": {
+    "toggle": {
+      "show": "▼ Show setup guide",
+      "hide": "▲ Hide setup guide"
+    },
+    "steps": {
+      "0": {
+        "title": "Start your OpenClaw Gateway",
+        "desc": "Run the gateway process on your machine. It listens on port 18789 by default.",
+        "code": "openclaw gateway start"
+      },
+      "1": {
+        "title": "Find your auth token",
+        "desc": "Copy the token from your gateway config file.",
+        "code": "cat ~/.openclaw/openclaw.json | grep token"
+      },
+      "2": {
+        "title": "Enter URL + token above",
+        "desc": "Paste the WebSocket URL and your token, then click Connect."
+      }
+    }
+  },
+  "validation": {
+    "urlRequired": "URL is required",
+    "urlInvalid": "Must start with ws:// or wss://",
+    "urlBadFormat": "Invalid URL format",
+    "tokenRequired": "Auth token is required",
+    "tokenShort": "Token must be at least 32 characters (operator-level access)"
+  },
+  "security": {
+    "insecureWarning": "Non-loopback ws:// connections are blocked. Use wss:// or connect to 127.0.0.1.",
+    "breakGlassAck": "I understand this connection is insecure and accept the risk.",
+    "tlsFingerprintLabel": "TLS Fingerprint (optional)",
+    "tlsFingerprintHint": "SHA-256 fingerprint for certificate pinning (gateway.remote.tlsFingerprint)."
+  },
+  "audit": {
+    "title": "Security Audit Log",
+    "clear": "Clear log",
+    "empty": "No audit events in this session.",
+    "toggle": {
+      "show": "▼ Show audit log",
+      "hide": "▲ Hide audit log"
+    },
+    "columns": {
+      "timestamp": "Time",
+      "action": "Action",
+      "detail": "Detail"
+    }
+  },
+  "info": {
+    "version": "Version",
+    "nodeId": "Node ID",
+    "protocol": "Protocol",
+    "maxTokens": "Max Tokens",
+    "streaming": "Streaming"
+  },
+  "toast": {
+    "saved": "Settings saved"
+  },
+  "about": {
+    "title": "About",
+    "description": "OpenClaw Dashboard v2 — Industrial Command Center for AI agent orchestration, cron monitoring, and workflow management.",
+    "meta": "Built with React + TypeScript + Three.js · Gateway Protocol v3"
+  }
+}

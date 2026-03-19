@@ -1,0 +1,78 @@
+{
+  "title": "Quadro de Projetos",
+  "toolbar": {
+    "searchPlaceholder": "Buscar tickets…",
+    "newTicket": "Novo Ticket",
+    "clearFilters": "Limpar filtros",
+    "filterByPriority": "Prioridade",
+    "filterByLabel": "Etiqueta",
+    "stats": {
+      "total": "{{count}} ticket",
+      "total_other": "{{count}} tickets",
+      "filtered": "{{shown}} de {{total}}",
+      "donePct": "% concluído"
+    }
+  },
+  "columns": {
+    "backlog": "Backlog",
+    "todo": "A Fazer",
+    "in_progress": "Em Progresso",
+    "review": "Em Revisão",
+    "done": "Concluído"
+  },
+  "ticket": {
+    "untitled": "Ticket sem título",
+    "addTicket": "Adicionar ticket",
+    "label": "ticket",
+    "id": "ID",
+    "title": "Título",
+    "description": "Descrição",
+    "descriptionPlaceholder": "Adicione uma descrição…",
+    "status": "Status",
+    "priority": "Prioridade",
+    "assignee": "Responsável",
+    "agent": "Agente",
+    "labels": "Etiquetas",
+    "dueDate": "Prazo",
+    "estimatedHours": "Horas Est.",
+    "created": "Criado",
+    "updated": "Atualizado",
+    "comments": "Comentários",
+    "noComments": "Nenhum comentário ainda",
+    "deleteConfirm": "Excluir este ticket?",
+    "deleteWarning": "Esta ação não pode ser desfeita."
+  },
+  "labels": {
+    "feature": "Funcionalidade",
+    "bug": "Bug",
+    "improvement": "Melhoria",
+    "research": "Pesquisa",
+    "blocked": "Bloqueado"
+  },
+  "priority": {
+    "P0": "Crítico",
+    "P1": "Alto",
+    "P2": "Médio",
+    "P3": "Baixo"
+  },
+  "empty": {
+    "column": "Nenhum ticket aqui",
+    "board": "Quadro vazio — crie seu primeiro ticket",
+    "filtered": "Nenhum ticket corresponde aos filtros"
+  },
+  "keyboard": {
+    "hint": "Pressione N para criar um ticket · Esc para fechar"
+  },
+  "board": {
+    "overdue": "Atrasado",
+    "dragToMove": "Arrastar para mover",
+    "dropHere": "Solte aqui",
+    "addTo": "Adicionar a {{column}}",
+    "headline": "Acompanhe todas as iniciativas do time",
+    "description": "Um quadro Kanban que conecta a atividade dos agentes aos resultados — do backlog ao concluído, com visibilidade completa por ticket.",
+    "feature0": "Arraste e solte entre 5 etapas do fluxo",
+    "feature1": "Triagem de prioridade de P0 (crítico) a P3",
+    "feature2": "Taxonomia de etiquetas: funcionalidade, bug, melhoria, pesquisa, bloqueado",
+    "feature3": "Rastreamento de responsáveis em toda a equipe de agentes"
+  }
+}

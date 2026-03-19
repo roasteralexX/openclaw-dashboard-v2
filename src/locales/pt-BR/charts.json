@@ -1,0 +1,46 @@
+{
+  "common": {
+    "noData": "Nenhum dado disponível",
+    "loading": "Carregando gráfico…",
+    "error": "Falha ao carregar dados do gráfico",
+    "zoomReset": "Redefinir zoom",
+    "tooltip": {
+      "value": "Valor",
+      "change": "Variação",
+      "volume": "Volume"
+    }
+  },
+  "tokenUsage": {
+    "title": "Uso de Tokens",
+    "xAxis": "Hora",
+    "yAxis": "Tokens",
+    "series": {
+      "input": "Tokens de Entrada",
+      "output": "Tokens de Saída",
+      "total": "Total de Tokens"
+    },
+    "summary": {
+      "totalToday": "Total hoje",
+      "avgPerSession": "Média por sessão",
+      "peakHour": "Hora de pico"
+    }
+  },
+  "agentActivity": {
+    "title": "Atividade dos Agentes",
+    "xAxis": "Hora",
+    "yAxis": "Eventos",
+    "series": {
+      "sessions": "Sessões",
+      "messages": "Mensagens",
+      "errors": "Erros"
+    }
+  },
+  "periods": {
+    "1h": "1h",
+    "4h": "4h",
+    "1d": "1D",
+    "1w": "1S",
+    "1m": "1M",
+    "all": "Tudo"
+  }
+}

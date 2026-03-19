@@ -1,0 +1,41 @@
+.shell {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--sp-6);
+  background: var(--c-base-900);
+}
+
+/* Subtle scanline overlay for the command-center feel */
+.content::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width);
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    var(--c-scanline) 2px,
+    var(--c-scanline) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}

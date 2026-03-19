@@ -1,0 +1,191 @@
+.overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-5);
+}
+
+/* ── Gateway status banners ─────────────────────── */
+
+.bannerWarn {
+  grid-column: 1 / -1;
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  font-family: var(--ff-mono);
+  background: var(--c-warn-100);
+  border: 1px solid var(--c-warn-200);
+  color: var(--c-warn-500);
+}
+
+.bannerError {
+  grid-column: 1 / -1;
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  font-family: var(--ff-mono);
+  background: rgba(255, 82, 82, 0.10);
+  border: 1px solid rgba(255, 82, 82, 0.25);
+  color: var(--c-error);
+}
+
+/* ── KPI Stat Cards ──────────────────────────────── */
+
+.statCard {
+  background: var(--c-surface-raised);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow var(--t-fast), border-color var(--t-fast);
+}
+
+.statCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: var(--c-border-accent);
+}
+
+/* Error accent: left border amber when card has errors */
+.statCardError {
+  border-left-width: 3px;
+  border-left-color: var(--c-warn-500);
+}
+
+.statLabel {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--c-text-muted);
+  margin-bottom: var(--sp-2);
+}
+
+.statValue {
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-mono);
+  color: var(--c-text-primary);
+  line-height: var(--lh-tight);
+}
+
+.statSub {
+  font-size: var(--fs-xs);
+  color: var(--c-text-secondary);
+  margin-top: var(--sp-2);
+}
+
+.statAccent  { color: var(--c-accent-500); }
+.statSuccess { color: var(--c-success); }
+.statWarn    { color: var(--c-warn-500); }
+.statError   { color: var(--c-error); }
+
+/* ── Chart ───────────────────────────────────────── */
+
+.chartSection {
+  grid-column: 1 / -1;
+  background: var(--c-surface-raised);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.chartTitle {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--c-text-muted);
+  margin-bottom: var(--sp-4);
+}
+
+/* ── Agent Mini Cards ────────────────────────────── */
+
+.agentGrid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+}
+
+.agentMini {
+  background: var(--c-surface-raised);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  padding: var(--sp-4) var(--sp-5);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: box-shadow var(--t-fast), border-color var(--t-fast);
+}
+
+.agentMini:hover {
+  border-color: var(--c-border-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), var(--shadow-glow-accent);
+}
+
+.agentMiniInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.agentMiniName {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--c-text-primary);
+}
+
+.agentMiniRole {
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  margin-top: 2px;
+}
+
+.agentMiniTokens {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  color: var(--c-accent-500);
+  font-weight: var(--fw-medium);
+}
+
+/* ── Gateway Health Strip ───────────────────────── */
+
+.healthStrip {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  background: var(--c-surface-raised);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-3) var(--sp-5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.healthItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.healthLabel {
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  font-weight: var(--fw-medium);
+}
+
+.healthValue {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--c-text-primary);
+}
+
+.healthHint {
+  color: var(--c-text-muted);
+  font-size: var(--fs-xs);
+}
+
+.healthDivider {
+  width: 1px;
+  height: 28px;
+  background: var(--c-border);
+  flex-shrink: 0;
+}

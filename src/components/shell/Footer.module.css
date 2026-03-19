@@ -1,0 +1,113 @@
+.footer {
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--sp-6);
+  background: var(--c-base-800);
+  border-top: 1px solid var(--c-border);
+  gap: var(--sp-4);
+  z-index: 2;
+}
+
+/* ── Left side ──────────────────────────────────── */
+
+.statusGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dotConnected {
+  background: var(--c-success);
+  box-shadow: 0 0 6px var(--c-success);
+  animation: live-pulse 2s ease-in-out infinite;
+}
+
+.dotDisconnected {
+  background: var(--c-warn-500);
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.statusLabel {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+}
+
+.statusLabelConnected {
+  color: var(--c-success);
+}
+
+.statusLabelDisconnected {
+  color: var(--c-warn-500);
+}
+
+.statusMessage {
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+}
+
+.separator {
+  font-size: var(--fs-xs);
+  color: var(--c-border);
+  user-select: none;
+}
+
+/* ── Right side ─────────────────────────────────── */
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-shrink: 0;
+}
+
+.urlChip {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  color: var(--c-accent-500);
+  background: var(--c-accent-100);
+  border: 1px solid var(--c-border-accent);
+  border-radius: var(--r-sm);
+  padding: 1px 8px;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.settingsLink {
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  text-decoration: none;
+  font-family: var(--ff-mono);
+  transition: color var(--t-fast);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.settingsLink:hover {
+  color: var(--c-accent-500);
+}
+
+.brand {
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  opacity: 0.5;
+  font-family: var(--ff-mono);
+}

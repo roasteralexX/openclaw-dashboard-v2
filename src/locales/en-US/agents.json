@@ -1,0 +1,37 @@
+{
+  "title": "Agent Monitor",
+  "subtitle": "Real-time agent sessions and chat interface",
+  "selectAgent": "Select an agent to view details and chat",
+  "noRecentActions": "No recent actions",
+  "sessionHistory": "Session History",
+  "loadEarlier": "Load earlier messages",
+  "loadingHistory": "Loading history…",
+  "typingIndicator": "Agent is typing",
+  "chat": {
+    "inputPlaceholder": "Send a message to this agent…",
+    "retry": "Retry",
+    "failed": "Message failed to send",
+    "sendFailed": "Failed to send: {{message}}",
+    "unknownError": "unknown error",
+    "charCount": "{{count}}/4000",
+    "rateLimited": "Sending too fast — please wait a moment."
+  },
+  "status": {
+    "active": "Active",
+    "idle": "Idle",
+    "error": "Error",
+    "offline": "Offline"
+  },
+  "session": {
+    "tokens": "Tokens",
+    "model": "Model",
+    "started": "Started"
+  },
+  "overview": {
+    "recentActions": "Recent Actions",
+    "totalTokens": "Total Tokens",
+    "tokensToday": "Tokens Today",
+    "activeSession": "Active Session",
+    "noSession": "No active session"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "common": {
+    "noData": "No data available",
+    "loading": "Loading chart…",
+    "error": "Failed to load chart data",
+    "zoomReset": "Reset zoom",
+    "tooltip": {
+      "value": "Value",
+      "change": "Change",
+      "volume": "Volume"
+    }
+  },
+  "tokenUsage": {
+    "title": "Token Usage",
+    "xAxis": "Time",
+    "yAxis": "Tokens",
+    "series": {
+      "input": "Input Tokens",
+      "output": "Output Tokens",
+      "total": "Total Tokens"
+    },
+    "summary": {
+      "totalToday": "Total today",
+      "avgPerSession": "Avg per session",
+      "peakHour": "Peak hour"
+    }
+  },
+  "agentActivity": {
+    "title": "Agent Activity",
+    "xAxis": "Hour",
+    "yAxis": "Events",
+    "series": {
+      "sessions": "Sessions",
+      "messages": "Messages",
+      "errors": "Errors"
+    }
+  },
+  "periods": {
+    "1h": "1h",
+    "4h": "4h",
+    "1d": "1D",
+    "1w": "1W",
+    "1m": "1M",
+    "all": "All"
+  }
+}
